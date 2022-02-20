@@ -1,6 +1,8 @@
 <script lang="ts">
-	import Menu32 from 'carbon-icons-svelte/lib/Menu32';
-	import Close32 from 'carbon-icons-svelte/lib/Close32';
+	import Menu from 'carbon-icons-svelte/lib/Menu24';
+	import Close from 'carbon-icons-svelte/lib/Close32';
+	let toggle = true;
+	let toggleNav = false;
 </script>
 
 <div class="nav">
@@ -14,11 +16,17 @@
 		</ul>
 	</div>
 	<div class="menu-icon">
-		<Menu32 />
+		<Menu on:click={() => (toggleNav = true)} />
+		<div
+			class={`toggler ${toggle ? 'toggler-dark' : 'toggler-light'}`}
+			on:click={() => (toggle = !toggle)}
+		>
+			<span class={`circle ${toggle ? 'circle-dark' : 'circle-light'}`} />
+		</div>
 	</div>
-	<div class="nav-links-mobile">
-		<div class="close-menu">
-			<Close32 />
+	<div class={`nav-links-mobile ${toggleNav ? 'show' : 'hide'}`}>
+		<div class="close-menu" on:click={() => (toggleNav = false)}>
+			<Close />
 		</div>
 		<ul>
 			<li><a href="#about-me">About Me</a></li>
@@ -43,15 +51,39 @@
 		@apply md:flex md:flex-row md:items-center md:gap-8;
 	}
 	.menu-icon {
-		@apply md:hidden;
+		@apply md:hidden flex flex-row-reverse  items-center gap-4;
+	}
+	.toggler {
+		@apply relative w-10 h-4 px-2 rounded-full ring ring-blue-300 flex flex-row items-center justify-end ease-in-out;
+	}
+	.toggler-dark {
+		@apply bg-gray-300 duration-300;
+	}
+	.toggler-light {
+		@apply bg-gray-800 duration-300;
+	}
+	.circle {
+		@apply absolute w-3 h-3 rounded-full ease-in-out;
+	}
+	.circle-light {
+		@apply right-0 bg-yellow-300 duration-700;
+	}
+	.circle-dark {
+		@apply left-0 bg-gray-800 duration-700;
 	}
 	.nav-links-mobile {
 		@apply md:hidden hidden fixed top-0 left-0 h-full w-full bg-gray-700 text-white;
 	}
 	.nav-links-mobile ul {
-		@apply flex flex-col items-center mt-16 gap-16;
+		@apply flex flex-col items-center mt-16 gap-16 w-full;
+	}
+	.show {
+		@apply flex;
+	}
+	.hide {
+		@apply hidden;
 	}
 	.close-menu {
-		@apply flex flex-col items-end;
+		@apply flex flex-row items-start justify-start right-2 top-5 absolute;
 	}
 </style>
