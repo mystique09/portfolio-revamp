@@ -2,6 +2,13 @@
   "name": "portfolio-revamp",
   "version": "0.0.1",
   "license": "MIT",
+  "description": "Revamping my portfolio.",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "portfolio",
+    "portfolio-revamp"
+  ],
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
