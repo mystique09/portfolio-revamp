@@ -14,7 +14,7 @@
 		</a>
 	</div>
 	<div class="img">
-		<img src="./static/undraw_welcome.svg" alt="Welcome Avatar">
+		<img src="./undraw_welcome.svg" alt="Welcome Avatar">
 	</div>
 </div>
 
