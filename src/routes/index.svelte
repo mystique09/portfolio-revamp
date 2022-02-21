@@ -2,6 +2,10 @@
 	import BtnIcon from 'carbon-icons-svelte/lib/Information24';
 </script>
 
+<svelte:head>
+	<title>Benjie Ben Garcia - Portfolio</title>
+</svelte:head>
+
 <div class="main">
 	<div class="intro">
 		<p>Hello, I am</p>
