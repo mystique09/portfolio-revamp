@@ -7,35 +7,41 @@
 		<p>Hello, I am</p>
 		<h2>Benjie Ben Garcia</h2>
 		<p>A self-taught programmer</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, illum. Suscipit quis iste, nihil dolore non nemo id repudiandae odio, sunt voluptas ad aspernatur magni possimus ducimus, magnam eligendi excepturi.</p>
+		<a class="btn" href="#abot-me">
+			<BtnIcon />
+			<span>About Me</span>
+		</a>
 	</div>
-	<div class="img" />
+	<div class="img">
+		<img src="./static/undraw_welcome.svg" alt="Welcome Avatar">
+	</div>
 </div>
-<a class="btn" href="#abot-me">
-	<BtnIcon />
-	<span>About Me</span>
-</a>
 
 <style lang="postcss">
 	.main {
-		@apply p-2 flex flex-col-reverse gap-4;
+		@apply p-2 h-[100vh] flex flex-col-reverse justify-end gap-4 dark:bg-blue-400 md:flex-row-reverse md:items-center md:max-w-6xl md:m-auto;
 	}
 	.intro {
-		@apply flex flex-col gap-2;
+		@apply flex flex-col gap-2 items-start justify-between md:w-1/2;
 	}
 	p:nth-child(3) {
-		@apply text-blue-400 text-base;
+		@apply text-base;
+	}
+	p:nth-child(4) {
+		@apply font-normal mt-4 text-lg;
 	}
 	p {
 		@apply font-light text-xl;
 	}
 	.img {
-		@apply h-72 bg-gray-200 max-w-md;
+		@apply bg-gray-200 max-w-2xl md:w-1/2;
 	}
 	h2 {
 		@apply font-bold text-3xl;
 	}
 	.btn {
-		@apply mt-2 text-gray-200 py-2 text-center flex items-center justify-center gap-4 bg-blue-600 m-auto w-72 h-16 rounded-lg;
+		@apply mt-2 text-gray-200 py-2 text-center flex items-center justify-center gap-4 bg-blue-600 m-auto w-72 h-16 rounded-lg mt-4;
 	}
 	.btn span {
 		@apply font-semibold text-lg;

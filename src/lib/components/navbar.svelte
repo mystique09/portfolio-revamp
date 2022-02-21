@@ -15,8 +15,10 @@
 			<li><a href="#contact-me">Contact Me</a></li>
 		</ul>
 	</div>
-	<div class="menu-icon">
-		<Menu on:click={() => (toggleNav = true)} />
+	<div class="nav-icons">
+		<div class="menu-icon">
+			<Menu on:click={() => (toggleNav = true)} />
+		</div>
 		<div
 			class={`toggler ${toggle ? 'toggler-dark' : 'toggler-light'}`}
 			on:click={() => (toggle = !toggle)}
@@ -39,19 +41,22 @@
 
 <style lang="postcss">
 	.nav {
-		@apply flex flex-row items-center justify-between px-2 h-20 bg-gray-700 text-white;
+		@apply flex flex-row items-center justify-between px-4 h-20 bg-gray-700 text-white;
 	}
 	.nav-logo {
 		@apply font-bold text-2xl;
 	}
 	.nav-links {
-		@apply hidden md:block;
+		@apply hidden md:flex ml-auto px-14;
 	}
 	.nav-links ul {
 		@apply md:flex md:flex-row md:items-center md:gap-8;
 	}
+	.nav-icons {
+		@apply flex flex-row-reverse  items-center gap-4;
+	}
 	.menu-icon {
-		@apply md:hidden flex flex-row-reverse  items-center gap-4;
+		@apply md:hidden;
 	}
 	.toggler {
 		@apply relative w-10 h-4 px-2 rounded-full ring ring-blue-300 flex flex-row items-center justify-end ease-in-out;
