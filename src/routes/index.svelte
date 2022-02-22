@@ -1,6 +1,7 @@
 <script lang="ts">
 	import BtnIcon from 'carbon-icons-svelte/lib/Information24';
 	import AboutMe from '$lib/components/about_me.svelte';
+	import ProjectList from '$lib/components/project_list.svelte';
 </script>
 
 <svelte:head>
@@ -23,6 +24,7 @@
 	</div>
 </main>
 <AboutMe />
+<ProjectList />
 
 <style lang="postcss">
 	main {
