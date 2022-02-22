@@ -3,6 +3,11 @@
 	import Close from 'carbon-icons-svelte/lib/Close32';
 	let toggle = true;
 	let toggleNav = false;
+
+	function toggleDarkMode() {
+		toggle = !toggle;
+		localStorage.theme = toggle ? 'light' : 'dark';
+	}
 </script>
 
 <div class="nav">
@@ -19,10 +24,7 @@
 		<div class="menu-icon">
 			<Menu on:click={() => (toggleNav = true)} />
 		</div>
-		<div
-			class={`toggler ${toggle ? 'toggler-dark' : 'toggler-light'}`}
-			on:click={() => (toggle = !toggle)}
-		>
+		<div class={`toggler ${!!toggle ? 'toggler-dark' : 'toggler-light'}`} on:click={toggleDarkMode}>
 			<span class={`circle ${toggle ? 'circle-dark' : 'circle-light'}`} />
 		</div>
 	</div>
