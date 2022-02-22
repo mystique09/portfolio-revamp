@@ -1,12 +1,22 @@
 <script lang="ts">
 	import Menu from 'carbon-icons-svelte/lib/Menu24';
 	import Close from 'carbon-icons-svelte/lib/Close32';
-	let toggle = true;
+	import { browser } from '$app/env';
+	let toggle = false;
 	let toggleNav = false;
+	let mode: string = browser && window ? localStorage.theme : '';
 
 	function toggleDarkMode() {
 		toggle = !toggle;
-		localStorage.theme = toggle ? 'light' : 'dark';
+
+		if (browser && window) {
+			if (toggle) {
+				localStorage.theme = 'dark';
+			} else {
+				localStorage.theme = 'light';
+			}
+		}
+		mode = localStorage.theme;
 	}
 </script>
 
@@ -24,8 +34,8 @@
 		<div class="menu-icon">
 			<Menu on:click={() => (toggleNav = true)} />
 		</div>
-		<div class={`toggler ${!!toggle ? 'toggler-dark' : 'toggler-light'}`} on:click={toggleDarkMode}>
-			<span class={`circle ${toggle ? 'circle-dark' : 'circle-light'}`} />
+		<div class={`toggler ${toggle ? 'toggler-light' : 'toggler-dark'}`} on:click={toggleDarkMode}>
+			<span class={`circle ${toggle ? 'circle-light' : 'circle-dark'}`} />
 		</div>
 	</div>
 	<div class={`nav-links-mobile ${toggleNav ? 'show' : 'hide'}`}>
@@ -76,7 +86,7 @@
 		@apply right-0 bg-yellow-300 duration-700;
 	}
 	.circle-dark {
-		@apply left-0 bg-gray-800 duration-700;
+		@apply left-0 bg-yellow-600 duration-700;
 	}
 	.nav-links-mobile {
 		@apply md:hidden hidden fixed top-0 left-0 h-full w-full bg-gray-700 text-white;
