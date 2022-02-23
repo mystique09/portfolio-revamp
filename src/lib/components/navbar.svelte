@@ -1,23 +1,7 @@
 <script lang="ts">
 	import Menu from 'carbon-icons-svelte/lib/Menu24';
 	import Close from 'carbon-icons-svelte/lib/Close32';
-	import { browser } from '$app/env';
-	let toggle = false;
 	let toggleNav = false;
-	let mode: string = browser && window ? localStorage.theme : '';
-
-	function toggleDarkMode() {
-		toggle = !toggle;
-
-		if (browser && window) {
-			if (toggle) {
-				localStorage.theme = 'dark';
-			} else {
-				localStorage.theme = 'light';
-			}
-		}
-		mode = localStorage.theme;
-	}
 </script>
 
 <div class="nav">
@@ -34,9 +18,9 @@
 		<div class="menu-icon">
 			<Menu on:click={() => (toggleNav = true)} />
 		</div>
-		<div class={`toggler ${toggle ? 'toggler-light' : 'toggler-dark'}`} on:click={toggleDarkMode}>
+		<!-- <div class={`toggler ${toggle ? 'toggler-light' : 'toggler-dark'}`} on:click={toggleDarkMode}>
 			<span class={`circle ${toggle ? 'circle-light' : 'circle-dark'}`} />
-		</div>
+		</div> -->
 	</div>
 	<div class={`nav-links-mobile ${toggleNav ? 'show' : 'hide'}`}>
 		<div class="close-menu" on:click={() => (toggleNav = false)}>
@@ -70,6 +54,7 @@
 	.menu-icon {
 		@apply md:hidden;
 	}
+	/*
 	.toggler {
 		@apply relative w-10 h-4 px-2 rounded-full ring ring-blue-300 flex flex-row items-center justify-end ease-in-out;
 	}
@@ -87,7 +72,7 @@
 	}
 	.circle-dark {
 		@apply left-0 bg-yellow-600 duration-700;
-	}
+	}*/
 	.nav-links-mobile {
 		@apply md:hidden hidden fixed top-0 left-0 h-full w-full bg-gray-700 text-white;
 	}

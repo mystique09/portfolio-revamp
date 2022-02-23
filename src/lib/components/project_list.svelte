@@ -56,12 +56,12 @@
 
 <style lang="postcss">
 	main {
-		@apply bg-gray-100 h-full p-4 dark:bg-gray-900;
+		@apply bg-gray-100 h-full md:h-screen p-4 md:flex md:flex-col md:items-center md:justify-center dark:bg-gray-900 py-10;
 	}
 	h2 {
-		@apply font-bold text-4xl text-gray-700 dark:text-gray-100;
+		@apply font-bold text-4xl text-gray-700 dark:text-gray-100 py-6;
 	}
 	.projects {
-		@apply flex flex-col gap-4 mt-6 md:flex-row md:flex-wrap md:items-center md:justify-center;
+		@apply flex flex-col gap-4 md:flex-row md:flex-wrap md:items-center md:m-auto md:justify-center max-w-6xl;
 	}
 </style>

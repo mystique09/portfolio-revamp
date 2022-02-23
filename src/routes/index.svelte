@@ -32,10 +32,10 @@
 
 <style lang="postcss">
 	main {
-		@apply bg-gray-100 p-2 py-12 h-full flex flex-col-reverse justify-end gap-4 dark:bg-gray-900 dark:text-gray-50 md:flex-row-reverse md:items-center md:max-w-6xl md:m-auto md:max-w-6xl;
+		@apply bg-gray-100 p-2 py-12 h-screen flex flex-col-reverse justify-end gap-4 md:flex-row-reverse md:items-center md:justify-center md:m-auto dark:bg-gray-900;
 	}
 	.intro {
-		@apply flex flex-col gap-1 items-start justify-evenly md:w-1/2;
+		@apply flex flex-col gap-1 items-start justify-evenly md:w-1/2 dark:text-white;
 	}
 	p:nth-child(3) {
 		@apply text-base dark:text-gray-400;
@@ -47,13 +47,13 @@
 		@apply font-light text-xl;
 	}
 	.img {
-		@apply bg-gray-200 max-w-2xl md:w-1/2;
+		@apply max-w-2xl md:w-1/2;
 	}
 	h2 {
 		@apply font-bold text-3xl;
 	}
 	.btn {
-		@apply text-gray-200 py-2 text-center flex items-center justify-center gap-4 bg-blue-600 m-auto w-72 h-16 rounded-lg mt-4 dark:text-gray-900;
+		@apply text-gray-200 py-2 text-center flex items-center justify-center gap-4 bg-blue-600 m-auto w-72 h-16 rounded-lg mt-4 dark:text-gray-50;
 	}
 	.btn span {
 		@apply font-semibold text-lg;
