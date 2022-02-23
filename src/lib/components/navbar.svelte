@@ -37,7 +37,7 @@
 
 <style lang="postcss">
 	.nav {
-		@apply flex flex-row items-center justify-between px-4 h-20 bg-gray-700 text-white;
+		@apply flex flex-row items-center justify-between px-4 h-20 bg-primary text-white;
 	}
 	.nav-logo {
 		@apply font-bold text-2xl;

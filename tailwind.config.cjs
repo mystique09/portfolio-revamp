@@ -2,10 +2,16 @@ const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				primary: "#150050",
+				secondary: "#000000",
+				accent: "#610094",
+			}
+		}
 	},
 
-	plugins: [],
+	plugins: [],	
 
 	//darkMode: 'class',
 };
