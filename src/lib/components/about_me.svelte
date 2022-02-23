@@ -18,7 +18,7 @@
 
 <style lang="postcss">
 	main {
-		@apply h-screen flex flex-col gap-4 bg-gray-400 text-gray-200 px-2 py-12 md:flex-row md:items-center md:m-auto dark:bg-gray-800 md:justify-center;
+		@apply h-screen pt-12 flex flex-col gap-4 bg-gray-400 text-gray-200 px-2 py-12 md:flex-row md:items-center md:m-auto dark:bg-gray-800 md:justify-center;
 	}
 	.img {
 		@apply max-w-2xl md:w-1/2;
@@ -30,15 +30,15 @@
 		@apply flex flex-col items-start gap-3 mt-4 max-w-md py-12;
 	}
 	.content h2 {
-		@apply font-bold text-gray-900 text-4xl;
+		@apply font-bold text-gray-900 text-4xl dark:text-gray-100;
 	}
 	.content p {
-		@apply font-light text-base text-gray-700;
+		@apply font-light text-sm md:text-base text-gray-700 dark:text-gray-300;
 	}
 	.social {
 		@apply flex flex-row items-center justify-around gap-4 w-full p-5 mt-4;
 	}
 	.social a {
-		@apply px-12 py-3 bg-accent rounded-xl font-light dark:bg-blue-600 dark:text-gray-300;
+		@apply px-12 py-3 bg-accent rounded-xl font-light dark:text-gray-300;
 	}
 </style>

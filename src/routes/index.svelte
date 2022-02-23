@@ -17,8 +17,8 @@
 			<p>A self-taught programmer</p>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, illum. Suscipit quis iste,
-				nihil dolore non nemo id repudiandae odio, sunt voluptas ad aspernatur magni possimus ducimus,
-				magnam eligendi excepturi.
+				nihil dolore non nemo id repudiandae odio, sunt voluptas ad aspernatur magni possimus
+				ducimus, magnam eligendi excepturi.
 			</p>
 			<a class="btn" href="#about-me">
 				<BtnIcon />
@@ -42,13 +42,13 @@
 		@apply h-full flex flex-col-reverse md:flex-row-reverse md:items-center md:justify-center md:m-auto md:max-w-6xl;
 	}
 	.intro {
-		@apply flex flex-col gap-4 items-start justify-evenly md:w-1/2 dark:text-white;
+		@apply flex flex-col gap-2 md:gap-4 items-start justify-evenly md:w-1/2 dark:text-white;
 	}
 	p:nth-child(3) {
 		@apply text-base dark:text-gray-400;
 	}
 	p:nth-child(4) {
-		@apply font-normal mt-4 text-lg dark:text-gray-300;
+		@apply font-normal mt-4 text-sm md:text-lg dark:text-gray-300;
 	}
 	p {
 		@apply font-light text-xl;

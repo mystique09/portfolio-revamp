@@ -2,9 +2,25 @@
 	import Menu from 'carbon-icons-svelte/lib/Menu24';
 	import Close from 'carbon-icons-svelte/lib/Close32';
 	let toggleNav = false;
+
+	function toggleNavbar() {
+		toggleNav = !toggleNav;
+	}
+
+	interface NavLink {
+		href: string;
+		title: string;
+	}
+
+	let nav_links: Array<NavLink> = [
+		{ href: '#about-me', title: 'About Me' },
+		{ href: '#projects', title: 'Projects' },
+		{ href: '#skills', title: 'Skills' },
+		{ href: '#contact-me', title: 'Contact Me' }
+	];
 </script>
 
-<div class="nav">
+<nav>
 	<div class="nav-logo">Portfolio</div>
 	<div class="nav-links">
 		<ul>
@@ -27,16 +43,15 @@
 			<Close />
 		</div>
 		<ul>
-			<li><a href="#about-me">About Me</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#contact-me">Projects</a></li>
+			{#each nav_links as nav_link}
+				<li on:click={toggleNavbar}><a href={nav_link.href}>{nav_link.title}</a></li>
+			{/each}
 		</ul>
 	</div>
-</div>
+</nav>
 
 <style lang="postcss">
-	.nav {
+	nav {
 		@apply flex flex-row items-center justify-between px-4 h-20 bg-primary text-white;
 	}
 	.nav-logo {
@@ -77,7 +92,7 @@
 		@apply md:hidden hidden fixed top-0 left-0 h-full w-full bg-gray-700 text-white;
 	}
 	.nav-links-mobile ul {
-		@apply flex flex-col items-center mt-16 gap-16 w-full;
+		@apply flex flex-col items-center mt-16 gap-16 w-full justify-center;
 	}
 	.show {
 		@apply flex;
