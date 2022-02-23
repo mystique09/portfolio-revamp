@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Menu from 'carbon-icons-svelte/lib/Menu24';
 	import Close from 'carbon-icons-svelte/lib/Close32';
-	let toggle = true;
 	let toggleNav = false;
 </script>
 
@@ -19,12 +18,9 @@
 		<div class="menu-icon">
 			<Menu on:click={() => (toggleNav = true)} />
 		</div>
-		<div
-			class={`toggler ${toggle ? 'toggler-dark' : 'toggler-light'}`}
-			on:click={() => (toggle = !toggle)}
-		>
-			<span class={`circle ${toggle ? 'circle-dark' : 'circle-light'}`} />
-		</div>
+		<!-- <div class={`toggler ${toggle ? 'toggler-light' : 'toggler-dark'}`} on:click={toggleDarkMode}>
+			<span class={`circle ${toggle ? 'circle-light' : 'circle-dark'}`} />
+		</div> -->
 	</div>
 	<div class={`nav-links-mobile ${toggleNav ? 'show' : 'hide'}`}>
 		<div class="close-menu" on:click={() => (toggleNav = false)}>
@@ -58,6 +54,7 @@
 	.menu-icon {
 		@apply md:hidden;
 	}
+	/*
 	.toggler {
 		@apply relative w-10 h-4 px-2 rounded-full ring ring-blue-300 flex flex-row items-center justify-end ease-in-out;
 	}
@@ -74,8 +71,8 @@
 		@apply right-0 bg-yellow-300 duration-700;
 	}
 	.circle-dark {
-		@apply left-0 bg-gray-800 duration-700;
-	}
+		@apply left-0 bg-yellow-600 duration-700;
+	}*/
 	.nav-links-mobile {
 		@apply md:hidden hidden fixed top-0 left-0 h-full w-full bg-gray-700 text-white;
 	}
