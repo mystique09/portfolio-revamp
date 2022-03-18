@@ -5,13 +5,12 @@
 	<div class="content">
 		<h2>About Me</h2>
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique, explicabo numquam
-			obcaecati deleniti iusto facere optio harum quo possimus. Pariatur aliquid vitae dignissimos
-			soluta laborum neque cupiditate repudiandae vel.
+			I am a self-taught programmer from PH, currently learning Go for the backend and Svelte for
+			the frontend, and I also have an interest in learning Rust.
 		</p>
 		<div class="social">
 			<a href="https://github.com/mystique09">Github</a>
-			<a href="https://linkedin.com/benjiebengarcia">LinkedIn</a>
+			<a href="https://www.linkedin.com/in/benjie-ben-garcia-916261202">LinkedIn</a>
 		</div>
 	</div>
 </main>
