@@ -8,33 +8,75 @@
 		demo: string;
 	}
 
+	function getRepo(repo_name: string) {
+		return `https://github.com/mystique09/${repo_name}`;
+	}
+
 	let projects: Array<Project> = [
 		{
 			name: 'Discord Bot',
 			description:
-				'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi velit totam voluptate exercitationem minus voluptatem iure eveniet fugiat alias praesentium, a error maxime qui. Voluptates consectetur eos quibusdam quis. Eaque?',
-			repo: 'testrepolink',
+				'Discord manager bot, can manage server roles, ban, kick, greet and automatically add Roles for new members. (still in development)',
+			repo: getRepo('void-bot-manager'),
 			demo: 'testrepolink'
 		},
 		{
-			name: 'Inventory System',
+			name: 'Inventory System (frontend)',
 			description:
-				'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi velit totam voluptate exercitationem minus voluptatem iure eveniet fugiat alias praesentium, a error maxime qui. Voluptates consectetur eos quibusdam quis. Eaque?',
-			repo: 'testrepolink',
+				'My first not so big personal project an Inventory system, can manage products, create, read, update, and delete(CRUD). Requires authentication to use the system. Stack: [Sveltekit, TailwindCSS] (still in development)',
+			repo: getRepo('inventory-system'),
 			demo: 'testrepolink'
 		},
 		{
-			name: 'Codegram',
+			name: 'Inventory System (backend)',
+			description: 'Inventory System backend. Stack: [Go, Echo, Gorm]',
+			repo: getRepo('inventory-system-go'),
+			demo: 'testrepolink'
+		},
+		{
+			name: 'Codegram (frontend)',
 			description:
-				'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi velit totam voluptate exercitationem minus voluptatem iure eveniet fugiat alias praesentium, a error maxime qui. Voluptates consectetur eos quibusdam quis. Eaque?',
-			repo: 'testrepolink',
+				'A social media-sh website, can do CRUD operations. Stack: [NextJS, TailwindCSS] (still in development)',
+			repo: getRepo('codegram'),
+			demo: 'testrepolink'
+		},
+		{
+			name: 'Codegram (backend)',
+			description:
+				'Backend for my Codegram website. Stack: [Go, EntGo, Echo] (still in development)',
+			repo: getRepo('codegram-go'),
+			demo: 'testrepolink'
+		},
+
+		{
+			name: 'Portfolio v1',
+			description: 'My first portfolio website made from scratch. Stack: [Scss, Js, Html5]',
+			repo: getRepo('portfolio-scratch'),
 			demo: 'testrepolink'
 		},
 		{
 			name: 'Portfolio v2',
+			description: 'My second portfolio website made from scratch. Stack: [Scss, Typescript, Vite]',
+			repo: getRepo('portfolio'),
+			demo: 'https://benjieben.tk'
+		},
+		{
+			name: 'Portfolio v3',
 			description:
-				'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi velit totam voluptate exercitationem minus voluptatem iure eveniet fugiat alias praesentium, a error maxime qui. Voluptates consectetur eos quibusdam quis. Eaque?',
-			repo: 'testrepolink',
+				'My third portfolio website made with Sveltekit and TailwindCSS. Stack: [Sveltekit, Typescript, TailwindCSS]',
+			repo: getRepo('portfolio-revamp'),
+			demo: 'https://benjieben-garcia.vercel.app'
+		},
+		{
+			name: 'Spotify Clone',
+			description: 'Spotify clone website. Stack: [Svelte, TailwindCSS]',
+			repo: getRepo('musify'),
+			demo: 'https://musify-puce.vercel.app'
+		},
+		{
+			name: 'Crypto Status',
+			description: 'Crypto Status viewer (not realtime). Stack: [Svelte, TailwindCSS]',
+			repo: getRepo('crypto_status'),
 			demo: 'testrepolink'
 		}
 	];
