@@ -36,7 +36,7 @@
 		{
 			name: 'Codegram (frontend)',
 			description:
-				'A social media-sh website, can do CRUD operations. Stack: [NextJS, TailwindCSS] (still in development)',
+				'A simple social media website, can do CRUD operations. Stack: [NextJS, TailwindCSS] (still in development)',
 			repo: getRepo('codegram'),
 			demo: 'testrepolink'
 		},

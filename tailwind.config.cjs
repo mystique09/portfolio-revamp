@@ -4,14 +4,14 @@ const config = {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#150050",
-				secondary: "#000000",
-				accent: "#610094",
+				primary: '#150050',
+				secondary: '#000000',
+				accent: '#610094'
 			}
 		}
 	},
 
-	plugins: [],	
+	plugins: []
 
 	//darkMode: 'class',
 };
