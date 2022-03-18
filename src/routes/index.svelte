@@ -15,11 +15,7 @@
 			<p>Hello, I am</p>
 			<h2>Benjie Ben Garcia</h2>
 			<p>A self-taught programmer</p>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, illum. Suscipit quis iste,
-				nihil dolore non nemo id repudiandae odio, sunt voluptas ad aspernatur magni possimus
-				ducimus, magnam eligendi excepturi.
-			</p>
+			<p>• My currently stack is Svelte and Go. <br /> • I am currently learning Go and Rust.</p>
 			<a class="btn" href="#about-me">
 				<BtnIcon />
 				<span>About Me</span>

@@ -16,13 +16,13 @@
 
 <style lang="postcss">
 	main {
-		@apply p-4 flex flex-col gap-4 bg-primary rounded-md md:w-[25rem];
+		@apply p-4 flex flex-col justify-between gap-4 bg-primary rounded-md md:w-[25rem] min-h-[15rem];
 	}
 	h4 {
 		@apply text-lg font-semibold text-gray-200;
 	}
 	p {
-		@apply text-gray-300 font-normal text-sm;
+		@apply text-left text-gray-300 font-normal text-sm;
 	}
 	.links {
 		@apply flex flex-row items-center justify-evenly;
