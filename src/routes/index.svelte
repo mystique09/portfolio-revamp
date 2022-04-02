@@ -15,7 +15,7 @@
 			<p>Hello, I am</p>
 			<h2>Benjie Ben Garcia</h2>
 			<p>A self-taught programmer</p>
-			<p>• My currently stack is Svelte and Go. <br /> • I am currently learning Go and Rust.</p>
+			<p>• I am currently learning Go and Rust.</p>
 			<a class="btn" href="#about-me">
 				<BtnIcon />
 				<span>About Me</span>
