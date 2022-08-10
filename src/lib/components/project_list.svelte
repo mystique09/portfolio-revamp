@@ -68,14 +68,13 @@
 		{
 			name: 'Class Management (frontend)',
 			description:
-				'My first not so big personal project an Inventory system, can manage products, create, read, update, and delete(CRUD). Requires authentication to use the system. Stack: [Sveltekit, TailwindCSS] (under development)',
+				'My first big personal project an Inventory system, can manage products, create, read, update, and delete(CRUD). Requires authentication to use the system. Stack: [Sveltekit, TailwindCSS] (under development)',
 			repo: getRepo('class-manager'),
 			demo: 'https://class-management.vercel.app'
 		},
 		{
-			name: 'Class Management (frontend)',
-			description:
-				'The backend of my first not so big personal project an Inventory system, can manage products, create, read, update, and delete(CRUD). Requires authentication to use the system. Stack: [Sveltekit, TailwindCSS] (under development)',
+			name: 'Class Management (backend)',
+			description: 'The backend of Class Management. Stack: [Go, Echo] (under development)',
 			repo: getRepo('class-manager-backend'),
 			demo: 'https://class-management.vercel.app'
 		},
