@@ -16,49 +16,100 @@
 		{
 			name: 'Discord Bot',
 			description:
-				'Discord manager bot, can manage server roles, ban, kick, greet and automatically add Roles for new members. (still in development)',
-			repo: getRepo('void-bot-manager'),
-			demo: 'testrepolink'
+				'Discord manager bot, can manage server roles, ban, kick, greet and automatically add Roles for new members. (under development)',
+			repo: getRepo('void'),
+			demo: getRepo('void')
+		},
+		{
+			name: 'Github Status',
+			description:
+				'Github status for your README.md Made with [Go, Echo, Entgo, Postgresql]. (under development)',
+			repo: getRepo('gh-status'),
+			demo: 'https://profile-status.herokuapp.com'
+		},
+		{
+			name: 'The tree command clone, made with Rust.',
+			description: 'I made this cli so that I can see the content of a directory in a tree format.',
+			repo: getRepo('lls'),
+			demo: getRepo('lls')
+		},
+		{
+			name: 'Brainf*ck interpreter, made with Rust.',
+			description: 'A basic brainf*ck interpreter made with rust.',
+			repo: getRepo('brainfck'),
+			demo: getRepo('brainfck')
 		},
 		{
 			name: 'Inventory System (frontend)',
 			description:
-				'My first not so big personal project an Inventory system, can manage products, create, read, update, and delete(CRUD). Requires authentication to use the system. Stack: [Sveltekit, TailwindCSS] (still in development)',
+				'My first not so big personal project an Inventory system, can manage products, create, read, update, and delete(CRUD). Requires authentication to use the system. Stack: [Sveltekit, TailwindCSS] (under development)',
 			repo: getRepo('inventory-system'),
-			demo: 'testrepolink'
+			demo: getRepo('inventory-system')
 		},
 		{
 			name: 'Inventory System (backend)',
 			description: 'Inventory System backend. Stack: [Go, Echo, Gorm]',
 			repo: getRepo('inventory-system-go'),
-			demo: 'testrepolink'
+			demo: getRepo('inventory-system-go')
+		},
+		{
+			name: 'Confessit (frontend)',
+			description: 'Sayout clone, made with: [Sveltekit, Go, Postgresql, Gorm, Echo]',
+			repo: getRepo('confessit'),
+			demo: 'https://confessit.vercel.app'
+		},
+		{
+			name: 'Confessit (backend)',
+			description:
+				'The backend of my Sayout clone, made with: [Sveltekit, Go, Postgresql, Gorm, Echo]',
+			repo: getRepo('confessit-backend'),
+			demo: 'https://confessit.vercel.app'
+		},
+		{
+			name: 'Class Management (frontend)',
+			description:
+				'My first not so big personal project an Inventory system, can manage products, create, read, update, and delete(CRUD). Requires authentication to use the system. Stack: [Sveltekit, TailwindCSS] (under development)',
+			repo: getRepo('class-manager'),
+			demo: 'https://class-management.vercel.app'
+		},
+		{
+			name: 'Class Management (frontend)',
+			description:
+				'The backend of my first not so big personal project an Inventory system, can manage products, create, read, update, and delete(CRUD). Requires authentication to use the system. Stack: [Sveltekit, TailwindCSS] (under development)',
+			repo: getRepo('class-manager-backend'),
+			demo: 'https://class-management.vercel.app'
 		},
 		{
 			name: 'Codegram (frontend)',
 			description:
-				'A simple social media website, can do CRUD operations. Stack: [NextJS, TailwindCSS] (still in development)',
+				'A simple social media website, can do CRUD operations. Stack: [NextJS, TailwindCSS] (under development)',
 			repo: getRepo('codegram'),
-			demo: 'testrepolink'
+			demo: getRepo('codegram')
 		},
 		{
 			name: 'Codegram (backend)',
-			description:
-				'Backend for my Codegram website. Stack: [Go, EntGo, Echo] (still in development)',
+			description: 'Backend for my Codegram website. Stack: [Go, EntGo, Echo] (under development)',
 			repo: getRepo('codegram-go'),
-			demo: 'testrepolink'
+			demo: getRepo('codegram-go')
 		},
-
+		{
+			name: 'To-Do in Golang (backend)',
+			description:
+				'Backend for my To-Do website. Stack: [Go(net/http), Gorm, Echo] (under development)',
+			repo: getRepo('todo-go'),
+			demo: getRepo('todo-go')
+		},
 		{
 			name: 'Portfolio v1',
 			description: 'My first portfolio website made from scratch. Stack: [Scss, Js, Html5]',
 			repo: getRepo('portfolio-scratch'),
-			demo: 'testrepolink'
+			demo: 'https://benjiev1.vercel.app/'
 		},
 		{
 			name: 'Portfolio v2',
 			description: 'My second portfolio website made from scratch. Stack: [Scss, Typescript, Vite]',
 			repo: getRepo('portfolio'),
-			demo: 'https://benjieben.tk'
+			demo: 'https://benjieben.tk/'
 		},
 		{
 			name: 'Portfolio v3',

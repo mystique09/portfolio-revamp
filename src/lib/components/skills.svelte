@@ -19,9 +19,8 @@
 		<div class="content">
 			<h4>Skills</h4>
 			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni neque enim nulla molestias
-				repellat unde quaerat praesentium corporis earum quo fugiat, sunt dolore deleniti culpa
-				fugit non quisquam inventore sequi.
+				The programming languages, tech stacks, and tools listed below are things I've learned over
+				the years of learning.
 			</p>
 		</div>
 		<div class="skills">
