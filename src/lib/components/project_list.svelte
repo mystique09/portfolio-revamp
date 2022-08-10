@@ -24,7 +24,7 @@
 			name: 'Github Status',
 			description:
 				'Github status for your README.md Made with [Go, Echo, Entgo, Postgresql]. (under development)',
-			repo: getRepo('gh-status'),
+			repo: getRepo('gh-stats'),
 			demo: 'https://profile-status.herokuapp.com'
 		},
 		{
@@ -101,7 +101,7 @@
 		{
 			name: 'Portfolio v1',
 			description: 'My first portfolio website made from scratch. Stack: [Scss, Js, Html5]',
-			repo: getRepo('portfolio-scratch'),
+			repo: getRepo('porfolio-scratch'),
 			demo: 'https://benjiev1.vercel.app/'
 		},
 		{
