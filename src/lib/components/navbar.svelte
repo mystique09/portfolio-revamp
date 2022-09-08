@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Menu from 'carbon-icons-svelte/lib/Menu24';
 	import Close from 'carbon-icons-svelte/lib/Close32';
+	import Logo from 'carbon-icons-svelte/lib/Development24';
+
 	let toggleNav = false;
 
 	function toggleNavbar() {
@@ -21,13 +23,14 @@
 </script>
 
 <nav>
-	<div class="nav-logo">Portfolio</div>
+	<div class="nav-logo flex flex-row">
+		<Logo /> Ben
+	</div>
 	<div class="nav-links">
 		<ul>
-			<li><a href="#about-me">About Me</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#contact-me">Contact Me</a></li>
+			{#each nav_links as nav_link}
+				<li><a href={nav_link.href}>{nav_link.title}</a></li>
+			{/each}
 		</ul>
 	</div>
 	<div class="nav-icons">
@@ -52,22 +55,22 @@
 
 <style lang="postcss">
 	nav {
-		@apply flex flex-row items-center justify-between px-4 h-20 bg-primary text-white;
+		@apply flex flex-row items-center justify-between px-4 h-20 bg-white text-white;
 	}
 	.nav-logo {
-		@apply font-bold text-2xl;
+		@apply text-primary font-bold text-2xl;
 	}
 	.nav-links {
 		@apply hidden md:flex ml-auto px-14;
 	}
 	.nav-links ul {
-		@apply md:flex md:flex-row md:items-center md:gap-8;
+		@apply text-black md:flex md:flex-row md:items-center md:gap-8;
 	}
 	.nav-icons {
 		@apply flex flex-row-reverse  items-center gap-4;
 	}
 	.menu-icon {
-		@apply md:hidden;
+		@apply md:hidden text-primary;
 	}
 	/*
 	.toggler {
