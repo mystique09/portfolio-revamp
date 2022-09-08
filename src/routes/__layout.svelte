@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
-	import Navbar from '$lib/components/navbar.svelte';
 	import { onMount } from 'svelte';
+	import Navbar from '$lib/components/navbar.svelte';
 
 	onMount(() => {
 		if (
