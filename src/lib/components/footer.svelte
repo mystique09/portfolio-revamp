@@ -28,5 +28,5 @@
 			>
 		</span>
 	</div>
-	<p class="text-sm font-light text-center">@Copyright {new Date().getFullYear()}</p>
+	<p class="text-sm font-light text-center">© {new Date().getFullYear()}</p>
 </footer>
