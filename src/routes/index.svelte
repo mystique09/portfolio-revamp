@@ -12,6 +12,5 @@
 
 <Hero />
 <AboutMe />
-<ProjectList />
 <Skills />
-<Footer />
+<ProjectList />

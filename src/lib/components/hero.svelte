@@ -22,7 +22,7 @@
 
 <style lang="postcss">
 	main {
-		@apply bg-gray-800 p-2 py-2 h-screen justify-end gap-4 dark:bg-gray-900;
+		@apply bg-gray-400 text-black p-2 py-2 h-screen justify-end gap-4 dark:bg-gray-900 dark:text-gray-300;
 	}
 	.wrap {
 		@apply h-full flex flex-col-reverse md:flex-row-reverse md:items-center md:justify-center md:m-auto md:max-w-6xl;
@@ -46,7 +46,7 @@
 		@apply font-bold text-3xl;
 	}
 	.btn {
-		@apply text-gray-200 py-2 text-center flex items-center justify-center gap-2 bg-accent m-auto w-56 h-14 rounded-lg mt-4 dark:text-gray-50;
+		@apply shadow-md py-2 text-center flex items-center justify-center gap-2 bg-white text-black dark:bg-accent m-auto w-56 h-14 rounded-lg mt-4 dark:text-gray-50;
 	}
 	.btn span {
 		@apply font-normal text-sm;

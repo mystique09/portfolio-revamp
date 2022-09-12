@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import Navbar from '$lib/components/navbar.svelte';
+import Footer from '$lib/components/footer.svelte';
 
 	onMount(() => {
 		if (
@@ -18,3 +19,4 @@
 
 <Navbar />
 <slot />
+<Footer />

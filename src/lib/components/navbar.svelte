@@ -23,8 +23,10 @@
 </script>
 
 <nav>
-	<div class="nav-logo flex flex-row">
-		<Logo /> Ben
+	<div class="nav-logo ">
+		<a class="flex flex-row" href="/">
+			<Logo /> Ben
+		</a>
 	</div>
 	<div class="nav-links">
 		<ul>

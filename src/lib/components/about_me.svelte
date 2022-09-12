@@ -17,7 +17,7 @@
 
 <style lang="postcss">
 	main {
-		@apply h-screen pt-12 flex flex-col gap-4 bg-gray-400 text-gray-200 px-2 py-12 md:flex-row md:items-center md:m-auto dark:bg-gray-900 md:justify-center;
+		@apply h-screen pt-12 flex flex-col gap-4 bg-gray-300 text-black px-2 py-12 md:flex-row md:items-center md:m-auto dark:bg-gray-900 md:justify-center;
 	}
 	.img {
 		@apply mt-16 max-w-2xl md:w-1/2;
@@ -38,6 +38,6 @@
 		@apply flex flex-row items-center justify-around gap-4 w-full p-5 mt-4;
 	}
 	.social a {
-		@apply shadow-sm shadow-accent/70 px-12 py-3 bg-accent rounded-md font-light dark:text-white text-sm;
+		@apply shadow-sm shadow-accent/70 px-12 py-3 text-black bg-white dark:bg-accent rounded-md font-light dark:text-white text-sm;
 	}
 </style>
