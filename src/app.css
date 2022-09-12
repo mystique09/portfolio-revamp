@@ -1,8 +1,11 @@
 /* Write your global styles here, in PostCSS syntax */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
 
-* {
+*,
+*::after,
+*::before {
 	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
 }
 
 *,
