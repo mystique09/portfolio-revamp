@@ -16,7 +16,7 @@
 
 <style>
 	main {
-		@apply p-4 flex flex-col justify-between gap-4 bg-black/70 rounded-md min-h-[15rem];
+		@apply p-4 flex flex-col justify-between gap-4 bg-black/80 rounded-md min-h-[15rem];
 	}
 	h4 {
 		@apply text-lg font-semibold text-gray-200;

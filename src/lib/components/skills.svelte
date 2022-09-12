@@ -37,7 +37,7 @@
 
 <style>
 	main {
-		@apply h-screen bg-gray-400 p-2 py-2 gap-4 flex items-center;
+		@apply h-screen bg-gray-300 p-2 py-2 gap-4 flex items-center;
 	}
 	.wrap {
 		@apply flex flex-col gap-14;
@@ -46,7 +46,7 @@
 		@apply flex flex-col gap-6;
 	}
 	h4 {
-		@apply font-bold text-4xl text-gray-700;
+		@apply font-bold text-4xl text-gray-800;
 	}
 	p {
 		@apply font-light text-sm text-gray-700;

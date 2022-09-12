@@ -39,9 +39,9 @@
 		<div class="menu-icon md:hidden">
 			<Menu on:click={() => (toggleNav = true)} />
 		</div>
-		<!-- <div class={`toggler ${toggle ? 'toggler-light' : 'toggler-dark'}`} on:click={toggleDarkMode}>
-			<span class={`circle ${toggle ? 'circle-light' : 'circle-dark'}`} />
-		</div> -->
+		<!-- <div class={`toggler ${toggle ? 'toggler-light' : 'toggler-dark'}`} on:click={toggleDarkMode}> -->
+		<!-- 	<span class={`circle ${toggle ? 'circle-light' : 'circle-dark'}`} /> -->
+		<!-- </div> -->
 	</div>
 	<div class={`nav-links-mobile md:hidden ${toggleNav ? 'show' : 'hide'}`}>
 		<div class="close-menu" on:click={() => (toggleNav = false)}>
@@ -59,7 +59,7 @@
 
 <style>
 	nav {
-		@apply flex flex-row items-center justify-between px-4 h-20 bg-white text-white;
+		@apply shadow-md shadow-black/40 flex flex-row items-center justify-between px-4 h-20 bg-white text-white;
 	}
 	.nav-logo {
 		@apply text-primary font-bold text-2xl;
@@ -106,7 +106,7 @@
 		@apply flex;
 	}
 	.hide {
-		@apply hidden;
+		@apply duration-300 hidden;
 	}
 	.close-menu {
 		@apply flex flex-row items-start justify-start right-2 top-5 absolute;

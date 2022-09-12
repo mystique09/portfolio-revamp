@@ -10,7 +10,7 @@
 
 <style>
 	main {
-		@apply bg-gray-400 h-full p-4 py-10;
+		@apply bg-gray-300 h-full p-4 py-10;
 	}
 	h2 {
 		@apply font-bold text-4xl text-gray-700 py-6;

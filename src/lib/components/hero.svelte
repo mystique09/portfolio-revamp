@@ -24,7 +24,7 @@
 
 <style>
 	main {
-		@apply bg-gray-400 text-black p-2 py-2 h-screen justify-end gap-4;
+		@apply bg-gray-300 text-black p-2 py-2 h-screen justify-end gap-4;
 	}
 	.wrap {
 		@apply h-full flex flex-col-reverse;

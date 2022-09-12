@@ -12,7 +12,7 @@
 		<span class="flex gap-1 items-center"
 			><Github />
 			<a
-				class="font-normal underline"
+				class="font-normal underline-none"
 				rel="noopener"
 				target="__blank"
 				href="https://github.com/mystique09">Github</a
@@ -21,7 +21,7 @@
 		<span class="flex gap-1 items-center"
 			><LogoLinkedin16 />
 			<a
-				class="font-normal underline"
+				class="font-normal underline-none"
 				rel="noopener"
 				target="__blank"
 				href="https://www.linkedin.com/in/benjie-ben-garcia-916261202">Linkedin</a
