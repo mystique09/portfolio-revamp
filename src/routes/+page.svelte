@@ -1,6 +1,5 @@
 <script lang="ts">
 	import AboutMe from '$lib/components/about_me.svelte';
-	import Footer from '$lib/components/footer.svelte';
 	import Hero from '$lib/components/hero.svelte';
 	import ProjectList from '$lib/components/project_list.svelte';
 	import Skills from '$lib/components/skills.svelte';
@@ -12,5 +11,5 @@
 
 <Hero />
 <AboutMe />
-<Skills />
 <ProjectList />
+<Skills />
