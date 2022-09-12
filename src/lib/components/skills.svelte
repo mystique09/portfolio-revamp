@@ -11,16 +11,16 @@
 	import Tailwind from './skills/tailwind.svelte';
 </script>
 
-<main id="skills">
-	<div class="wrap">
-		<div class="content">
-			<h4>Skills</h4>
-			<p>
+<main class="dark:bg-gray-900" id="skills">
+	<div class="wrap md:max-w-6xl md:flex-row md:m-auto md:items-center md:justify-center">
+		<div class="content md:w-1/3">
+			<h4 class="dark:text-gray-200">Skills</h4>
+			<p class="md:text-base dark:text-gray-300">
 				The programming languages, tech stacks, and tools listed below are things I've learned over
 				the years of learning.
 			</p>
 		</div>
-		<div class="skills">
+		<div class="skills md:gap-8">
 			<Css />
 			<ExpressJs />
 			<Go />
@@ -35,23 +35,23 @@
 	</div>
 </main>
 
-<style lang="postcss">
+<style>
 	main {
-		@apply h-screen bg-gray-400 p-2 py-2 gap-4 dark:bg-gray-900 flex items-center;
+		@apply h-screen bg-gray-400 p-2 py-2 gap-4 flex items-center;
 	}
 	.wrap {
-		@apply md:max-w-6xl flex flex-col gap-14 md:flex-row md:m-auto md:items-center md:justify-center;
+		@apply flex flex-col gap-14;
 	}
 	.content {
-		@apply md:w-1/3 flex flex-col gap-6;
+		@apply flex flex-col gap-6;
 	}
 	h4 {
-		@apply font-bold text-4xl text-gray-700 dark:text-gray-200;
+		@apply font-bold text-4xl text-gray-700;
 	}
 	p {
-		@apply font-light text-sm md:text-base text-gray-700 dark:text-gray-300;
+		@apply font-light text-sm text-gray-700;
 	}
 	.skills {
-		@apply grid grid-cols-4 gap-6 md:gap-8;
+		@apply grid grid-cols-4 gap-6;
 	}
 </style>

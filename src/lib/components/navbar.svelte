@@ -28,34 +28,36 @@
 			<Logo /> Ben
 		</a>
 	</div>
-	<div class="nav-links">
-		<ul>
+	<div class="nav-links md:flex text-black">
+		<ul class="hidden md:flex md:flex-row md:items-center md:gap-8">
 			{#each nav_links as nav_link}
-				<li><a href={nav_link.href}>{nav_link.title}</a></li>
+				<li><a class="text-black" href={nav_link.href}>{nav_link.title}</a></li>
 			{/each}
 		</ul>
 	</div>
 	<div class="nav-icons">
-		<div class="menu-icon">
+		<div class="menu-icon md:hidden">
 			<Menu on:click={() => (toggleNav = true)} />
 		</div>
 		<!-- <div class={`toggler ${toggle ? 'toggler-light' : 'toggler-dark'}`} on:click={toggleDarkMode}>
 			<span class={`circle ${toggle ? 'circle-light' : 'circle-dark'}`} />
 		</div> -->
 	</div>
-	<div class={`nav-links-mobile ${toggleNav ? 'show' : 'hide'}`}>
+	<div class={`nav-links-mobile md:hidden ${toggleNav ? 'show' : 'hide'}`}>
 		<div class="close-menu" on:click={() => (toggleNav = false)}>
 			<Close />
 		</div>
 		<ul>
 			{#each nav_links as nav_link}
-				<li on:click={toggleNavbar}><a href={nav_link.href}>{nav_link.title}</a></li>
+				<li on:click={toggleNavbar}>
+					<a class="text-white" href={nav_link.href}>{nav_link.title}</a>
+				</li>
 			{/each}
 		</ul>
 	</div>
 </nav>
 
-<style lang="postcss">
+<style>
 	nav {
 		@apply flex flex-row items-center justify-between px-4 h-20 bg-white text-white;
 	}
@@ -63,17 +65,18 @@
 		@apply text-primary font-bold text-2xl;
 	}
 	.nav-links {
-		@apply hidden md:flex ml-auto px-14;
+		@apply ml-auto px-14;
 	}
 	.nav-links ul {
-		@apply text-black md:flex md:flex-row md:items-center md:gap-8;
+		@apply text-black;
 	}
 	.nav-icons {
 		@apply flex flex-row-reverse  items-center gap-4;
 	}
 	.menu-icon {
-		@apply md:hidden text-primary;
+		@apply text-primary;
 	}
+
 	/*
 	.toggler {
 		@apply relative w-10 h-4 px-2 rounded-full ring ring-blue-300 flex flex-row items-center justify-end ease-in-out;
@@ -94,7 +97,7 @@
 		@apply left-0 bg-yellow-600 duration-700;
 	}*/
 	.nav-links-mobile {
-		@apply md:hidden hidden fixed top-0 left-0 h-full w-full bg-gray-700 text-white;
+		@apply hidden fixed top-0 left-0 h-full w-full bg-gray-700 text-white;
 	}
 	.nav-links-mobile ul {
 		@apply flex flex-col items-center mt-16 gap-16 w-full justify-center;
