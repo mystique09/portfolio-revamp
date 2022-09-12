@@ -6,7 +6,7 @@
 </script>
 
 <main class="dark:bg-primary/80 md:w-[25rem]">
-	<h4>{name}</h4>
+	<h3>{name}</h3>
 	<p>{description}</p>
 	<div class="links">
 		<a class="dark:text-white dark:bg-accent" href={demo}>Demo</a>
@@ -18,7 +18,7 @@
 	main {
 		@apply p-4 flex flex-col justify-between gap-4 bg-black/80 rounded-md min-h-[15rem];
 	}
-	h4 {
+	h3 {
 		@apply text-lg font-semibold text-gray-200;
 	}
 	p {
