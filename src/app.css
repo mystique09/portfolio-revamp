@@ -12,8 +12,15 @@
 html,
 body {
 	scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+ul {
+  list-style: none;
+}
+
+a {
+  @apply text-accent;
+  text-decoration: none;
+}
