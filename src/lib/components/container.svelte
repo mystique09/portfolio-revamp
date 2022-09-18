@@ -3,16 +3,16 @@
 	export let title: string;
 </script>
 
-<main {id}>
-	<h2>{title}</h2>
+<main class="md:h-auto md:flex md:flex-col md:items-center md:justify-center dark:bg-gray-900" {id}>
+	<h2 class="dark:text-gray-100">{title}</h2>
 	<slot />
 </main>
 
-<style lang="postcss">
+<style>
 	main {
-		@apply bg-gray-400 h-full md:h-auto p-4 md:flex md:flex-col md:items-center md:justify-center dark:bg-gray-900 py-10;
+		@apply bg-gray-300 h-full p-4 py-10;
 	}
 	h2 {
-		@apply font-bold text-4xl text-gray-700 dark:text-gray-100 py-6;
+		@apply font-bold text-4xl text-gray-700 py-6;
 	}
 </style>

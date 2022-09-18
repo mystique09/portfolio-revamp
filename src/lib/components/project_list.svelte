@@ -21,28 +21,32 @@
 			id="all"
 			type="button"
 			on:click={handleClick}
-			class="py-2 rounded px-10 bg-gray-100 text-accent">All</button
+			class="duration-300 py-2 hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			>All</button
 		>
 		<button
 			id="Go"
 			type="button"
 			on:click={handleClick}
-			class="py-2 rounded px-10 bg-gray-100 text-accent">Go</button
+			class="duration-300 py-2 hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			>Go</button
 		>
 		<button
 			id="Rust"
 			type="button"
 			on:click={handleClick}
-			class="py-2 rounded px-10 bg-gray-100 text-accent">Rust</button
+			class="duration-300 py-2 hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			>Rust</button
 		>
 		<button
 			id="Web"
 			type="button"
 			on:click={handleClick}
-			class="py-2 rounded px-10 bg-gray-100 text-accent">Web</button
+			class="duration-300 py-2 hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			>Web</button
 		>
 	</div>
-	<div class="projects">
+	<div class="projects md:flex-row md:flex-wrap md:items-center md:m-auto md:justify-center">
 		{#each filterProjects(tag) as project}
 			<ProjectCard
 				name={project.name}
@@ -54,8 +58,8 @@
 	</div>
 </Container>
 
-<style lang="postcss">
+<style>
 	.projects {
-		@apply flex flex-col gap-4 md:flex-row md:flex-wrap md:items-center md:m-auto md:justify-center max-w-6xl;
+		@apply flex flex-col gap-4 max-w-6xl;
 	}
 </style>
