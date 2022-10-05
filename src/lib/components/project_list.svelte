@@ -1,7 +1,6 @@
 <script lang="ts">
 	import ProjectCard from './project_card.svelte';
 	import { projectList, type Project } from '$lib/constants';
-	import Container from './container.svelte';
 
 	let tag = 'all';
 
@@ -15,7 +14,8 @@
 	};
 </script>
 
-<Container id="projects" title="Projects">
+<main class="h-auto bg-gray-300 flex flex-col items-center justify-center dark:bg-gray-900" id="projects">
+	<h2 class="dark:text-gray-100">Projects</h2>
 	<div class="gap-4 mb-12 flex flex-wrap items-center justify-center">
 		<button
 			id="all"
@@ -46,7 +46,7 @@
 			>Web</button
 		>
 	</div>
-	<div class="projects md:flex-row md:flex-wrap md:items-center md:m-auto md:justify-center">
+	<div class="projects">
 		{#each filterProjects(tag) as project}
 			<ProjectCard
 				name={project.name}
@@ -56,10 +56,16 @@
 			/>
 		{/each}
 	</div>
-</Container>
+</main>
 
 <style>
+	main {
+		@apply h-full p-4 py-10;
+	}
+	h2 {
+		@apply font-bold text-4xl text-gray-700 py-6;
+	}
 	.projects {
-		@apply flex flex-col gap-4 max-w-6xl;
+		@apply w-full flex flex-row flex-wrap items-center justify-center gap-4 max-w-6xl;
 	}
 </style>
