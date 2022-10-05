@@ -26,7 +26,7 @@
 
 <svelte:window bind:scrollY={scrollPosY} />
 
-<nav class={`${scrollPosY > 10 ? "fixed w-full bg-white/70" : ""}`}>
+<nav class={`${scrollPosY > 10 ? "fixed w-full bg-white/80" : ""}`}>
 		<div class="nav-logo">
 			<a class="flex flex-row" href="/">
 				<Logo /> Ben
