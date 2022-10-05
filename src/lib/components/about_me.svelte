@@ -4,7 +4,7 @@
 >
 <div class="p-4 flex flex-col md:flex-row m-auto items-center justify-around max-w-6xl gap-2">
 	<div class="max-w-md md:w-full md:h-full sm:h-1/2 sm:w-1/2">
-		<img height="200" width="200" src="./undraw_programming_re_kg9v.svg" alt="Person avatar" />
+		<img height="10" width="10" src="./undraw_programming_re_kg9v.svg" alt="Person avatar" />
 	</div>
 	<div class="content">
 		<h2 class="dark:text-gray-100">About Me</h2>
