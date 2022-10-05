@@ -17,7 +17,7 @@
 			</a>
 		</div>
 		<div class="max-w-2xl md:max-w-md sm:w-1/2 sm:h-1/4 md:w-full md:h-full">
-			<img width="200" height="200" src="./undraw_welcome.svg" alt="Welcome Avatar" />
+			<img width="10" height="10" src="./undraw_welcome.svg" alt="Welcome Avatar" />
 		</div>
 	</div>
 </main>
