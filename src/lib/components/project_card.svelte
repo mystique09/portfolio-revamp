@@ -3,9 +3,11 @@
 	export let description: string;
 	export let repo: string;
 	export let demo: string;
+
+	import { fade } from 'svelte/transition';
 </script>
 
-<main class="dark:bg-primary/80 md:w-[25rem]">
+<main class="dark:bg-primary/80 md:w-[25rem]" transition:fade>
 	<h3>{name}</h3>
 	<p>{description}</p>
 	<div class="links">

@@ -2,7 +2,7 @@
 	import ProjectCard from './project_card.svelte';
 	import { projectList, type Project } from '$lib/constants';
 
-	let tag = 'all';
+	let tag = "all";
 
 	const filterProjects = (tag: string): Project[] => {
 		if (tag === 'all') return projectList;
@@ -21,28 +21,28 @@
 			id="all"
 			type="button"
 			on:click={handleClick}
-			class="duration-300 py-2 hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			class="duration-300 py-2 cursor-pointer  hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
 			>All</button
 		>
 		<button
 			id="Go"
 			type="button"
 			on:click={handleClick}
-			class="duration-300 py-2 hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
 			>Go</button
 		>
 		<button
 			id="Rust"
 			type="button"
 			on:click={handleClick}
-			class="duration-300 py-2 hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
 			>Rust</button
 		>
 		<button
 			id="Web"
 			type="button"
 			on:click={handleClick}
-			class="duration-300 py-2 hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
 			>Web</button
 		>
 	</div>
@@ -66,6 +66,6 @@
 		@apply font-bold text-4xl text-gray-700 py-6;
 	}
 	.projects {
-		@apply w-full flex flex-row flex-wrap items-center justify-center gap-4 max-w-6xl;
+		@apply w-full flex flex-row flex-wrap items-center justify-center gap-4 max-w-8xl;
 	}
 </style>
