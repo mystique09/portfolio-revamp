@@ -32,10 +32,10 @@
 				<Logo /> Ben
 			</a>
 		</div>
-		<div class="nav-links md:flex text-black">
+		<div class="nav-links md:flex">
 			<ul class="hidden md:flex md:flex-row md:items-center md:gap-8">
 				{#each nav_links as nav_link}
-					<li><a class="text-black" href={nav_link.href}>{nav_link.title}</a></li>
+					<li><a href={nav_link.href}>{nav_link.title}</a></li>
 				{/each}
 			</ul>
 		</div>
