@@ -20,46 +20,50 @@
 		{ href: '#skills', title: 'Skills' },
 		{ href: '#contact-me', title: 'Contact Me' }
 	];
+
+	let scrollPosY;
 </script>
 
-<nav>
-	<div class="nav-logo">
-		<a class="flex flex-row" href="/">
-			<Logo /> Ben
-		</a>
-	</div>
-	<div class="nav-links md:flex text-black">
-		<ul class="hidden md:flex md:flex-row md:items-center md:gap-8">
-			{#each nav_links as nav_link}
-				<li><a class="text-black" href={nav_link.href}>{nav_link.title}</a></li>
-			{/each}
-		</ul>
-	</div>
-	<div class="nav-icons">
-		<div class="menu-icon md:hidden">
-			<Menu on:click={() => (toggleNav = true)} />
+<svelte:window bind:scrollY={scrollPosY} />
+
+<nav class={`${scrollPosY > 10 ? "fixed w-full bg-white/70" : ""}`}>
+		<div class="nav-logo">
+			<a class="flex flex-row" href="/">
+				<Logo /> Ben
+			</a>
 		</div>
-		<!-- <div class={`toggler ${toggle ? 'toggler-light' : 'toggler-dark'}`} on:click={toggleDarkMode}> -->
-		<!-- 	<span class={`circle ${toggle ? 'circle-light' : 'circle-dark'}`} /> -->
-		<!-- </div> -->
-	</div>
-	<div class={`nav-links-mobile md:hidden ${toggleNav ? 'show' : 'hide'}`}>
-		<div class="close-menu" on:click={() => (toggleNav = false)}>
-			<Close />
+		<div class="nav-links md:flex text-black">
+			<ul class="hidden md:flex md:flex-row md:items-center md:gap-8">
+				{#each nav_links as nav_link}
+					<li><a class="text-black" href={nav_link.href}>{nav_link.title}</a></li>
+				{/each}
+			</ul>
 		</div>
-		<ul>
-			{#each nav_links as nav_link}
-				<li on:click={toggleNavbar}>
-					<a class="text-white" href={nav_link.href}>{nav_link.title}</a>
-				</li>
-			{/each}
-		</ul>
-	</div>
+		<div class="nav-icons">
+			<div class="menu-icon md:hidden">
+				<Menu on:click={() => (toggleNav = true)} />
+			</div>
+			<!-- <div class={`toggler ${toggle ? 'toggler-light' : 'toggler-dark'}`} on:click={toggleDarkMode}> -->
+			<!-- 	<span class={`circle ${toggle ? 'circle-light' : 'circle-dark'}`} /> -->
+			<!-- </div> -->
+		</div>
+		<div class={`nav-links-mobile md:hidden ${toggleNav ? 'show' : 'hide'}`}>
+			<div class="close-menu" on:click={() => (toggleNav = false)}>
+				<Close />
+			</div>
+			<ul>
+				{#each nav_links as nav_link}
+					<li on:click={toggleNavbar}>
+						<a class="text-white" href={nav_link.href}>{nav_link.title}</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
 </nav>
 
 <style>
 	nav {
-		@apply shadow-md shadow-black/40 flex flex-row items-center justify-between px-4 h-20 bg-white text-white;
+		@apply max-w-8xl m-auto shadow-black/40 flex flex-row items-center justify-between px-4 h-20 text-white;
 	}
 	.nav-logo {
 		@apply text-primary font-bold text-2xl;
