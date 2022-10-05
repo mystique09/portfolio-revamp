@@ -23,7 +23,7 @@
 </script>
 
 <nav>
-	<div class="nav-logo ">
+	<div class="nav-logo">
 		<a class="flex flex-row" href="/">
 			<Logo /> Ben
 		</a>
