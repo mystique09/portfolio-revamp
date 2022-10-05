@@ -3,7 +3,7 @@
 	export let title: string;
 </script>
 
-<main class="md:h-auto md:flex md:flex-col md:items-center md:justify-center dark:bg-gray-900" {id}>
+<main class="h-auto md:flex md:flex-col md:items-center md:justify-center dark:bg-gray-900" {id}>
 	<h2 class="dark:text-gray-100">{title}</h2>
 	<slot />
 </main>
