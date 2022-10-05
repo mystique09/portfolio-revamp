@@ -4,7 +4,7 @@
 	import LogoLinkedin16 from 'carbon-icons-svelte/lib/LogoLinkedin16';
 </script>
 
-<footer id="contact-me" class="h-full p-4 flex flex-col">
+<footer id="contact-me" class="h-full bg-white p-4 flex flex-col">
 	<div class="nav-logo font-bold text-xl flex flex-row">
 		<Logo /> Ben
 	</div>
