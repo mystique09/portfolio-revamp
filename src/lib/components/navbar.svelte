@@ -14,7 +14,7 @@
 		title: string;
 	}
 
-	let nav_links: Array<NavLink> = [
+	let nav_links: NavLink[] = [
 		{ href: '#about-me', title: 'About Me' },
 		{ href: '#projects', title: 'Projects' },
 		{ href: '#skills', title: 'Skills' },
