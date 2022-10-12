@@ -1,9 +1,7 @@
-<main
-	id="about-me"
-	class="flex items-center dark:text-gray-300 bg-gray-300 dark:bg-gray-900"
+<main id="about-me"
 >
-<div class="p-4 flex flex-col md:flex-row m-auto items-center justify-around max-w-6xl gap-2">
-	<div class="max-w-md md:w-full md:h-full sm:h-1/2 sm:w-1/2">
+<div class="wrap">
+	<div class="img-wrapper">
 		<img height="10" width="10" src="./undraw_programming_re_kg9v.svg" alt="Person avatar" />
 	</div>
 	<div class="content">
@@ -22,13 +20,22 @@
 
 <style>
 	main {
-		@apply text-black p-2 py-4 h-[100vh] justify-end items-center gap-4;
+		@apply w-full text-black px-2 py-4 gap-4;
+		@apply md\:h-screen md\:flex md\:items-center md\:justify-center;
+	}
+	.wrap {
+		@apply md\:flex md\:flex-row items-center justify-around max-w-4xl m-auto;
+		@apply sm\:flex sm\:flex-column;
+	}
+	.img-wrapper {
+		@apply h-full w-[100%];
 	}
 	img {
-		@apply max-w-md max-h-md h-full w-full;
+		@apply max-w-md h-full w-[100%];
 	}
 	.content {
-		@apply flex flex-col items-start gap-3 mt-4 py-12;
+		@apply flex flex-col items-start gap-3 mt-4;
+		@apply sm\:flex-col sm\:flex sm\:items-center sm\:justify-between max-w-md;
 	}
 	.content h2 {
 		@apply font-bold text-gray-900 text-4xl;
@@ -38,6 +45,7 @@
 	}
 	.social {
 		@apply flex flex-row items-center justify-around gap-4 w-full p-5 mt-4;
+		@apply max-w-md;
 	}
 	.social a {
 		@apply shadow-sm shadow-accent/70 px-12 py-3 text-black bg-white rounded-md font-light text-sm;
