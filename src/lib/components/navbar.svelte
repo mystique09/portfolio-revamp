@@ -20,13 +20,9 @@
 		{ href: '#skills', title: 'Skills' },
 		{ href: '#contact-me', title: 'Contact Me' }
 	];
-
-	let scrollPosY;
 </script>
 
-<svelte:window bind:scrollY={scrollPosY} />
-
-<nav class={`${scrollPosY > 10 ? "fixed w-full bg-white/80" : ""}`}>
+<nav>
 		<div class="nav-logo">
 			<a class="flex flex-row" href="/">
 				<Logo /> Ben
@@ -63,7 +59,7 @@
 
 <style>
 	nav {
-		@apply max-w-8xl m-auto shadow-black/40 flex flex-row items-center justify-between px-4 h-20 text-white;
+		@apply bg-gray-300 max-w-8xl m-auto shadow-black/40 flex flex-row items-center justify-between px-4 h-20 text-white;
 	}
 	.nav-logo {
 		@apply text-primary font-bold text-2xl;
