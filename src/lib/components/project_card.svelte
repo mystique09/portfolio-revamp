@@ -3,11 +3,9 @@
 	export let description: string;
 	export let repo: string;
 	export let demo: string;
-
-	import { fade } from 'svelte/transition';
 </script>
 
-<main class="dark:bg-primary/80 md:w-[25rem]" transition:fade>
+<main class="dark:bg-primary/80 md:w-[25rem]">
 	<h3>{name}</h3>
 	<p>{description}</p>
 	<div class="links">
@@ -30,6 +28,6 @@
 		@apply flex flex-row items-center justify-evenly;
 	}
 	.links a {
-		@apply text-black text-sm px-10 py-3 rounded-lg bg-white;
+		@apply text-black text-sm px-8 py-2 rounded-lg bg-white;
 	}
 </style>

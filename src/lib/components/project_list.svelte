@@ -14,35 +14,35 @@
 	};
 </script>
 
-<main class="h-auto bg-gray-300 flex flex-col items-center justify-center dark:bg-gray-900" id="projects">
+<main class="h-auto flex flex-col items-center justify-center dark:bg-gray-900" id="projects">
 	<h2 class="dark:text-gray-100">Projects</h2>
 	<div class="gap-4 mb-12 flex flex-wrap items-center justify-center">
 		<button
 			id="all"
 			type="button"
 			on:click={handleClick}
-			class="duration-300 py-2 cursor-pointer  hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none ring bg-white ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white rounded px-10 bg-gray-100 text-accent"
 			>All</button
 		>
 		<button
 			id="Go"
 			type="button"
 			on:click={handleClick}
-			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			class="duration-300 py-2 cursor-pointer hover:scale-120 rounded px-10 bg-white border-none ring ring-accent hover:bg-accent hover:text-white text-accent"
 			>Go</button
 		>
 		<button
 			id="Rust"
 			type="button"
 			on:click={handleClick}
-			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none bg-white ring ring-accent hover:bg-accent hover:text-white rounded px-10 bg-gray-100 text-accent"
 			>Rust</button
 		>
 		<button
 			id="Web"
 			type="button"
 			on:click={handleClick}
-			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none rounded px-10 bg-gray-100 text-accent"
+			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none bg-white ring ring-accent hover:bg-accent hover:text-white rounded px-10 bg-gray-100 text-accent"
 			>Web</button
 		>
 	</div>
