@@ -11,7 +11,7 @@
 	import Tailwind from './skills/tailwind.svelte';
 </script>
 
-<main class="bg-gray-300 dark:bg-gray-900" id="skills">
+<main class="dark:bg-gray-900" id="skills">
 	<div class="flex flex-col p-4 gap-12 md:max-w-6xl sm:flex-row m-auto md:items-center md:justify-center">
 		<div class="content md:w-1/3">
 			<h4 class="dark:text-gray-200">Skills</h4>
