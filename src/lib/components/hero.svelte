@@ -2,7 +2,7 @@
 	import BtnIcon from 'carbon-icons-svelte/lib/ArrowDown24';
 </script>
 
-<main id="#" class="md:h-full bg-gray-300">
+<main id="#" class="md:h-screen sm:h-full">
 	<div class="h-full p-4 flex flex-col-reverse md:flex-row-reverse m-auto md:items-center sm:items-start justify-around max-w-6xl">
 		<div class="intro md:gap-4 md:w-1/2 dark:text-white">
 			<p>Hello, I am</p>
