@@ -11,44 +11,28 @@
 	import Tailwind from './skills/tailwind.svelte';
 </script>
 
-<main class="dark:bg-gray-900" id="skills">
-	<div class="flex flex-col p-4 gap-12 md:max-w-6xl sm:flex-row m-auto md:items-center md:justify-center">
-		<div class="content md:w-1/3">
-			<h4 class="dark:text-gray-200">Skills</h4>
-			<p class="md:text-base dark:text-gray-300">
-				The programming languages, tech stacks, and tools listed below are things I've learned over
-				the years of learning.
-			</p>
-		</div>
-		<div class="skills md:gap-8">
-			<Css />
-			<ExpressJs />
-			<Go />
-			<Html />
-			<Javascript />
-			<NodeJs />
-			<Rust />
-			<Sass />
-			<Svelte />
-			<Tailwind />
+<div id="skills" class="about-me hero min-h-screen bg-base-100">
+	<div class="hero-content max-w-4xl w-full flex justify-start">
+		<div class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+			<div>
+				<h1 class="text-neutral text-7xl md:text-8xl font-bold">Skills</h1>
+				<p class="mt-2 text-lg md:text-xl max-w-md">
+					The programming languages, tech stacks, and tools listed below are things I've learned over
+					the years of learning.
+				</p>
+			</div>
+			<div class="grid grid-cols-4 grid-rows-3 skills mt-4 gap-4">
+				<Css />
+				<ExpressJs />
+				<Go />
+				<Html />
+				<Javascript />
+				<NodeJs />
+				<Rust />
+				<Sass />
+				<Svelte />
+				<Tailwind />
+			</div>
 		</div>
 	</div>
-</main>
-
-<style>
-	main {
-		@apply h-screen p-2 py-2 gap-4 flex items-center;
-	}
-	.content {
-		@apply flex flex-col gap-6;
-	}
-	h4 {
-		@apply font-bold text-4xl text-gray-800;
-	}
-	p {
-		@apply font-light text-sm text-gray-700;
-	}
-	.skills {
-		@apply grid grid-cols-4 gap-6;
-	}
-</style>
+</div>
