@@ -4,29 +4,20 @@
 	import LogoLinkedin16 from 'carbon-icons-svelte/lib/LogoLinkedin16';
 </script>
 
-<footer id="contact-me" class="max-w-8xl m-auto h-full bg-white p-4 flex flex-col">
-	<div class="nav-logo font-bold text-xl flex flex-row">
-		<Logo /> Ben
+<footer class="footer p-10 bg-neutral text-neutral-content">
+	<div>
+		<img width="50" height="50" src="/favicon.png" alt="footer avatar" />
+		<p>Benjie Ben Garcia. <br>©	{new Date().getFullYear()}</p>
 	</div>
-	<div class="py-4">
-		<span class="flex gap-1 items-center"
-			><Github />
-			<a
-				class="font-normal underline-none"
-				rel="noopener"
-				target="__blank"
-				href="https://github.com/mystique09">Github</a
-			>
-		</span>
-		<span class="flex gap-1 items-center"
-			><LogoLinkedin16 />
-			<a
-				class="font-normal underline-none"
-				rel="noopener"
-				target="__blank"
-				href="https://www.linkedin.com/in/benjie-ben-garcia-916261202">Linkedin</a
-			>
-		</span>
+	<div class="div">
+		<span class="footer-title">Social</span>
+		<div class="grid grid-flow-col gap-4">
+			<a target="_blank" rel="noopener" href="https://github.com/mystique09">
+				<Github />
+			</a>
+			<a target="_blank" rel="noopener" href="https://www.linkedin.com/in/benjie-ben-garcia-916261202">
+				<LogoLinkedin16 />
+			</a>
+		</div>
 	</div>
-	<p class="text-sm font-light text-center">© {new Date().getFullYear()}</p>
 </footer>
