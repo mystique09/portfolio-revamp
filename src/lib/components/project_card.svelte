@@ -3,31 +3,25 @@
 	export let description: string;
 	export let repo: string;
 	export let demo: string;
+	export let tags: string[];
 </script>
 
-<main class="dark:bg-primary/80 md:w-[25rem]">
-	<h3>{name}</h3>
-	<p>{description}</p>
-	<div class="links">
-		<a class="dark:text-white dark:bg-accent" href={demo}>Demo</a>
-		<a href={repo}>Github</a>
-	</div>
-</main>
-
-<style>
-	main {
-		@apply p-4 flex flex-col justify-between gap-4 bg-black/78 rounded-md w-full max-w-sm min-h-[15rem];
-	}
-	h3 {
-		@apply text-lg font-semibold text-gray-200;
-	}
-	p {
-		@apply text-left text-gray-300 font-normal text-sm;
-	}
-	.links {
-		@apply flex flex-row items-center justify-evenly;
-	}
-	.links a {
-		@apply text-black text-sm px-8 py-2 rounded-lg bg-white;
-	}
-</style>
+<div class="h-auto md:h-full card card-side bg-neutral text-neutral-content shadow-xl max-w-sm">
+	<div class="card-body">
+		<div class="card-title">	
+			<h1 class="mt-2">{name}</h1>
+			<div class="badges absolute top-0 right-0 flex flex-row p-3 gap-1">
+				{#each tags as tag}
+					<div class="badge badge-primary dark:badge-secondary">{tag}</div>
+				{/each}
+			</div>
+		</div>
+		<p class="text-sm">{description}</p>
+		<div class="card-actions justify-end mt-2">
+			<a class="btn btn-sm btn-primary dark:btn-secondary normal-case" target="_blank" rel="noopener" href={repo}>Github</a>
+			{#if !!demo}
+				<a class="btn btn-sm btn-primary dark:btn-secondary normal-case" target="_blank" rel="noopener" href={demo}>Demo</a>
+			{/if}
+		</div>
+	</div>	
+</div>

@@ -4,68 +4,41 @@
 
 	let tag = "all";
 
-	const filterProjects = (tag: string): Project[] => {
-		if (tag === 'all') return projectList;
-		return projectList.filter((p) => p.tags.includes(tag));
-	};
-
-	const handleClick = (e) => {
-		tag = e.currentTarget.getAttribute('id');
-	};
+	// let carouselHeight: number;
+	// $: console.log(carouselHeight)
 </script>
 
-<main class="h-auto flex flex-col items-center justify-center dark:bg-gray-900" id="projects">
-	<h2 class="dark:text-gray-100">Projects</h2>
-	<div class="gap-4 mb-12 flex flex-wrap items-center justify-center">
-		<button
-			id="all"
-			type="button"
-			on:click={handleClick}
-			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none ring bg-white ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white ring ring-accent hover:bg-accent hover:text-white rounded px-10 bg-gray-100 text-accent"
-			>All</button
-		>
-		<button
-			id="Go"
-			type="button"
-			on:click={handleClick}
-			class="duration-300 py-2 cursor-pointer hover:scale-120 rounded px-10 bg-white border-none ring ring-accent hover:bg-accent hover:text-white text-accent"
-			>Go</button
-		>
-		<button
-			id="Rust"
-			type="button"
-			on:click={handleClick}
-			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none bg-white ring ring-accent hover:bg-accent hover:text-white rounded px-10 bg-gray-100 text-accent"
-			>Rust</button
-		>
-		<button
-			id="Web"
-			type="button"
-			on:click={handleClick}
-			class="duration-300 py-2 cursor-pointer hover:scale-120 border-none bg-white ring ring-accent hover:bg-accent hover:text-white rounded px-10 bg-gray-100 text-accent"
-			>Web</button
-		>
+<div id="projects" class="projects hero min-h-screen bg-base-100">
+	<div class="hero-content max-w-4xl w-full flex justify-start">
+		<div class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+			<div>
+				<h1 class="text-neutral text-7xl md:text-8xl font-bold mb-2">Projects</h1>
+				<p class="text-lg md:text-xl">
+					List of my personal projects. <br>
+					<span class="badge badge-primary dark:badge-secondary">Frontend</span>
+					<span class="badge badge-primary dark:badge-secondary">Backend</span> 
+					<span class="badge badge-primary dark:badge-secondary">Bots</span>
+					<span class="badge badge-primary dark:badge-secondary">CLI</span> 
+				</p>
+			</div>
+			<div>
+				<div>
+					<!-- <progress class="progress progress-primary w-full" value="20" max={carouselHeight}></progress> -->
+					<div class="h-96 carousel carousel-vertical rounded-box">
+						{#each projectList as project (project.id)}
+							<div id={`project-${project.id}`} class="carousel-item my-2 w-full">
+								<ProjectCard
+									name={project.name}
+									description={project.description}
+									repo={project.repo}
+									demo={project.demo}
+									tags={project.tags}
+							/>
+							</div>
+						{/each}
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="projects">
-		{#each filterProjects(tag) as project}
-			<ProjectCard
-				name={project.name}
-				description={project.description}
-				repo={project.repo}
-				demo={project.demo}
-			/>
-		{/each}
-	</div>
-</main>
-
-<style>
-	main {
-		@apply h-full p-4 py-10;
-	}
-	h2 {
-		@apply font-bold text-4xl text-gray-700 py-6;
-	}
-	.projects {
-		@apply w-full flex flex-row flex-wrap items-center justify-center gap-4 max-w-8xl;
-	}
-</style>
+</div>

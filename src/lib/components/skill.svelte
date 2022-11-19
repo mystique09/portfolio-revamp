@@ -1,8 +1,8 @@
-<main class="bg-gray-200">
+<main class="bg-neutral">
 	<slot />
 </main>
 
-<style>
+<style lang="postcss">
 	main {
 		@apply w-[4rem] h-[4rem] rounded-lg flex items-center justify-center p-2;
 	}
