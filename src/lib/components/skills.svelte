@@ -11,11 +11,11 @@
 	import Tailwind from './skills/tailwind.svelte';
 </script>
 
-<div id="skills" class="about-me hero min-h-screen bg-base-100">
+<div id="skills" class="about-me hero min-h-screen bg-base-100 dark:bg-neutral dark:text-neutral-content">
 	<div class="hero-content max-w-4xl w-full flex justify-start">
 		<div class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 			<div>
-				<h1 class="text-neutral text-7xl md:text-8xl font-bold">Skills</h1>
+				<h1 class="text-neutral text-7xl md:text-8xl font-bold dark:text-neutral-content">Skills</h1>
 				<p class="mt-2 text-lg md:text-xl max-w-md">
 					The programming languages, tech stacks, and tools listed below are things I've learned over
 					the years of learning.
