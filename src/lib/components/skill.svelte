@@ -1,4 +1,4 @@
-<main class="bg-neutral">
+<main class="bg-neutral dark:bg-base-100">
 	<slot />
 </main>
 
