@@ -8,11 +8,11 @@
 	// $: console.log(carouselHeight)
 </script>
 
-<div id="projects" class="projects hero min-h-screen bg-base-100">
+<div id="projects" class="projects hero min-h-screen bg-base-100 dark:bg-neutral dark:text-neutral-content">
 	<div class="hero-content max-w-4xl w-full flex justify-start">
 		<div class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 			<div>
-				<h1 class="text-neutral text-7xl md:text-8xl font-bold mb-2">Projects</h1>
+				<h1 class="text-neutral text-7xl md:text-8xl font-bold mb-2 dark:text-neutral-content">Projects</h1>
 				<p class="text-lg md:text-xl">
 					List of my personal projects. <br>
 					<span class="badge badge-primary dark:badge-secondary">Frontend</span>
