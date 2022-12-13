@@ -11,5 +11,5 @@
 
 <Hero />
 <AboutMe />
-<ProjectList />
 <Skills />
+<ProjectList />
