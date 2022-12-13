@@ -9,7 +9,7 @@
 		<p>Benjie Ben Garcia. <br>©	{new Date().getFullYear()}</p>
 	</div>
 	<div class="div">
-		<span class="text-neutral-content font-bold uppercase mb-0.5">Social</span>
+		<span class="text-neutral-content font-bold dark:text-base-content uppercase mb-0.5">Social</span>
 		<div class="grid grid-flow-col gap-4">
 			<a id="github" aria-label="github" target="_blank" rel="noopener" href="https://github.com/mystique09">
 				<Github />
