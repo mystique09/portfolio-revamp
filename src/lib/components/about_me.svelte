@@ -7,7 +7,7 @@
 			<h1 class="text-neutral text-7xl md:text-8xl font-bold dark:text-neutral-content">
 				About Me
 			</h1>
-			<p class="mt-4 text-base max-w-xl md:text-lg tracking-wide">
+			<p class="text-base max-w-xl md:text-lg tracking-wide">
 				I am a self-taught programmer from the Philippines, currently learning Go for backend
 				development and Svelte for frontend development. In addition to these programming languages,
 				I also have an interest in learning Rust, which is known for its performance and safety
@@ -16,7 +16,7 @@
 				computer programming. I am passionate about using technology to solve complex problems and
 				create innovative solutions.
 			</p>
-			<div class="social mt-2">
+			<div class="social mt-6">
 				<a
 					id="github-aboutme"
 					aria-label="github-aboutme"
