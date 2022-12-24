@@ -23,7 +23,7 @@
 					that I have accomplished. <br />
 				</p>
 			</div>
-			<div>
+			<div class="self-center">
 				<div>
 					<div class="h-96 carousel carousel-vertical rounded-box">
 						{#each projectList as project (project.id)}
