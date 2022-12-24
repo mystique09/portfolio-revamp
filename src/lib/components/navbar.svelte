@@ -44,6 +44,7 @@
 	onMount(() => {
 		preferedTheme = prefersDarkThemes() ? THEMES.DARK : THEMES.LIGHT;
 		currentTheme = localStorage.getItem(STORAGE_KEY) ?? preferedTheme;
+		applyTheme();
 		window.matchMedia(DARK_PREFERENCE).addEventListener('change', applyTheme);
 	});
 </script>
