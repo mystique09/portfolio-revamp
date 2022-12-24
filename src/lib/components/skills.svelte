@@ -5,7 +5,6 @@
 	import Html from './skills/html.svelte';
 	import Javascript from './skills/javascript.svelte';
 	import NodeJs from './skills/node_js.svelte';
-	import Rust from './skills/rust.svelte';
 	import Sass from './skills/sass.svelte';
 	import Svelte from './skills/svelte.svelte';
 	import Tailwind from './skills/tailwind.svelte';
@@ -18,10 +17,8 @@
 	<div class="hero-content max-w-4xl w-full flex justify-start">
 		<div class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 			<div>
-				<h1 class="text-neutral text-7xl md:text-8xl font-bold dark:text-neutral-content">
-					Skills
-				</h1>
-				<p class="mt-2 text-base tracking-wide md:text-lg max-w-lg">
+				<h1 class="text-neutral text-7xl md:text-8xl font-bold dark:text-white">Skills</h1>
+				<p class="mt-2 text-sm tracking-wide md:text-base max-w-lg">
 					The programming languages, tech stacks, and tools <span class="md:hidden"
 						>listed below</span
 					> are things that I have learned and mastered over the years of my self-guided learning journey.

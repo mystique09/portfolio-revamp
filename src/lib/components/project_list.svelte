@@ -10,10 +10,8 @@
 	<div class="hero-content max-w-4xl w-full flex justify-start">
 		<div class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 			<div>
-				<h1 class="text-neutral text-7xl md:text-8xl font-bold mb-2 dark:text-neutral-content">
-					Projects
-				</h1>
-				<p class="text-base mt-4 tracking-wide max-w-lg md:text-lg">
+				<h1 class="text-neutral text-7xl md:text-8xl font-bold mb-2 dark:text-white">Projects</h1>
+				<p class="text-sm mt-4 tracking-wide max-w-lg md:text-base">
 					This is a list of some of my personal projects, which I have undertaken in order to learn
 					new skills, test out new ideas, and challenge myself as a programmer. These projects are a
 					reflection of my passion for technology and my dedication to constantly improving my

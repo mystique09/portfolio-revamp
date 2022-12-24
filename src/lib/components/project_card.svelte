@@ -11,14 +11,14 @@
 >
 	<div class="card-body">
 		<div class="card-title">
-			<h1 class="mt-2">{name}</h1>
+			<h1 class="mt-2 text-white dark:text-neutral">{name}</h1>
 			<div class="badges absolute top-0 right-0 flex flex-row p-3 gap-1">
 				{#each tags as tag}
 					<div class="badge badge-primary dark:badge-secondary">{tag}</div>
 				{/each}
 			</div>
 		</div>
-		<p class="text-sm">{description}</p>
+		<p class="text-sm text-white dark:text-neutral">{description}</p>
 		<div class="card-actions justify-end mt-2">
 			<a
 				class="btn btn-sm btn-primary dark:btn-secondary normal-case"

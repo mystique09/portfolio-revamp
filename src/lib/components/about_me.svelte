@@ -4,10 +4,8 @@
 >
 	<div class="hero-content max-w-4xl w-full flex justify-start">
 		<div class="max-w-4xl">
-			<h1 class="text-neutral text-7xl md:text-8xl font-bold dark:text-neutral-content">
-				About Me
-			</h1>
-			<p class="text-base max-w-xl md:text-lg tracking-wide">
+			<h1 class="text-neutral text-7xl md:text-8xl font-bold dark:text-white">About Me</h1>
+			<p class="text-sm max-w-xl md:text-base tracking-wide">
 				I am a self-taught programmer from the Philippines, currently learning Go for backend
 				development and Svelte for frontend development. In addition to these programming languages,
 				I also have an interest in learning Rust, which is known for its performance and safety
