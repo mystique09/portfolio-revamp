@@ -6,8 +6,10 @@
 <footer class="w-full p-10 bg-neutral text-neutral-content dark:bg-base-100 dark:text-base-content">
 	<div class="footer w-full max-w-4xl m-auto">
 		<div>
-			<img width="50" height="50" src="/favicon.png" alt="footer avatar" />
-			<p>Benjie Ben Garcia. <br />© {new Date().getFullYear()}</p>
+			<div class="w-14 h-14">
+				<img class="w-full h-full" src="/favicon.webp" alt="footer avatar" />
+			</div>
+			<p class="mt-2 text-white dark:text-neutral">Benjie Ben Garcia. <br />© {new Date().getFullYear()}</p>
 		</div>
 		<div class="div">
 			<span class="text-neutral-content font-bold dark:text-base-content uppercase mb-0.5"
