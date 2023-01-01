@@ -45,7 +45,7 @@ export const projectList: Project[] = [
         description: "Sayout clone, made with: [Sveltekit, Go, Postgresql, Gorm, Echo]",
         tags: ["Svelte", "Web", "Frontend"],
         repo: getRepo("confessit"),
-        demo: "https://confessit.vercel.app",
+        demo: "https://cnfs.vercel.app",
     },
     {
         id: 6,
