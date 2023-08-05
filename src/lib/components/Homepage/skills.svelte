@@ -1,13 +1,5 @@
 <script lang="ts">
-	import Css from './skills/css.svelte';
-	import ExpressJs from './skills/express_js.svelte';
-	import Go from './skills/go.svelte';
-	import Html from './skills/html.svelte';
-	import Javascript from './skills/javascript.svelte';
-	import NodeJs from './skills/node_js.svelte';
-	import Sass from './skills/sass.svelte';
-	import Svelte from './skills/svelte.svelte';
-	import Tailwind from './skills/tailwind.svelte';
+	import { Javascript, ExpressJs, Go, Html, Css, NodeJs, Sass, Svelte, Tailwind } from '$lib/components/common/icons';
 </script>
 
 <div

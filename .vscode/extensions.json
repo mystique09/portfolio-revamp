@@ -1,6 +1,3 @@
 {
-	"recommendations": [
-		"svelte.svelte-vscode",
-		"rome.rome"
-	]
+	"recommendations": ["svelte.svelte-vscode", "rome.rome"]
 }

@@ -21,7 +21,7 @@
 				Benjie Ben Garcia
 			</h1>
 			<p class="mt-4 text-sm md:text-base max-w-xl tracking-wide">
-				Hello and welcome to my portfolio. I am excited to share with you some of my past projects
+				Hello, welcome to my portfolio. I am excited to share with you some of my past projects
 				and accomplishments as a programmer. As you browse through my portfolio, I hope you will get
 				a sense of my passion for technology and my dedication to constantly learning and improving
 				my skills. Thank you for visiting my portfolio and I hope you enjoy what you see.
