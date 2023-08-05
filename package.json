@@ -1,6 +1,6 @@
 {
   "name": "portfolio-revamp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "description": "Revamping my portfolio.",
   "keywords": [
@@ -20,23 +20,23 @@
     "format": "rome format src/** --write"
   },
   "devDependencies": {
-    "@fontsource/poppins": "^4.5.10",
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/adapter-cloudflare": "1.0.0-next.40",
-    "@sveltejs/kit": "next",
-    "autoprefixer": "^10.4.13",
-    "carbon-icons-svelte": "^10.45.1",
-    "daisyui": "^2.43.2",
-    "postcss": "^8.4.20",
-    "postcss-load-config": "^3.1.4",
-    "rome": "^0.10.1",
-    "svelte": "^3.54.0",
-    "svelte-check": "^2.10.2",
-    "svelte-preprocess": "^4.10.7",
-    "tailwindcss": "^3.2.4",
-    "tslib": "^2.4.1",
-    "typescript": "~4.5.5",
-    "vite": "^4.0.1"
+    "@fontsource/poppins": "^5.0.7",
+    "@sveltejs/adapter-auto": "2.1.0",
+    "@sveltejs/adapter-cloudflare": "2.3.2",
+    "@sveltejs/kit": "1.22.4",
+    "autoprefixer": "^10.4.14",
+    "daisyui": "^3.5.1",
+    "lucide-svelte": "^0.263.0",
+    "postcss": "^8.4.27",
+    "postcss-load-config": "^4.0.1",
+    "rome": "^12.1.3",
+    "svelte": "^4.1.2",
+    "svelte-check": "^3.4.6",
+    "svelte-preprocess": "^5.0.4",
+    "tailwindcss": "^3.3.3",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.8"
   },
   "type": "module"
 }

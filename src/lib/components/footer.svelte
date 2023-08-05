@@ -1,6 +1,5 @@
 <script>
-	import Github from 'carbon-icons-svelte/lib/LogoGithub16';
-	import LogoLinkedin16 from 'carbon-icons-svelte/lib/LogoLinkedin16';
+	import { Github, Linkedin } from 'lucide-svelte';
 </script>
 
 <footer class="w-full p-10 bg-neutral text-neutral-content dark:bg-base-100 dark:text-base-content">
@@ -32,7 +31,7 @@
 					rel="noreferrer"
 					href="https://www.linkedin.com/in/benjie-ben-garcia-916261202"
 				>
-					<LogoLinkedin16 />
+					<Linkedin />
 				</a>
 			</div>
 		</div>
