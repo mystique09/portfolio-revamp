@@ -1,8 +1,8 @@
 <script lang="ts">
-	import AboutMe from '$lib/components/about_me.svelte';
-	import Hero from '$lib/components/hero.svelte';
-	import ProjectList from '$lib/components/project_list.svelte';
-	import Skills from '$lib/components/skills.svelte';
+	import AboutMe from '$lib/components/Homepage/about_me.svelte';
+	import Hero from '$lib/components/Homepage/hero.svelte';
+	import ProjectList from '$lib/components/Homepage/project_list.svelte';
+	import Skills from '$lib/components/Homepage/skills.svelte';
 </script>
 
 <svelte:head>
