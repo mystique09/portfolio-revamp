@@ -1,19 +1,2 @@
 /* Write your global styles here, in PostCSS syntax */
-*,
-*::after,
-*::before {
-	font-family: 'Poppins', sans-serif;
-	box-sizing: border-box;
-}
-
-*,
-html,
-body {
-	scroll-behavior: smooth;
-	margin: 0;
-	padding: 0;
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer reset, base, tokens, recipes, utilities;
