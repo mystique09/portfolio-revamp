@@ -12,7 +12,16 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			'styled-system': './styled-system/*'
+		},
+		typescript: {
+			config: (config) => {
+				config.include.push("../styled-system");
+				return config;
+			}
+		}
 	}
 };
 
