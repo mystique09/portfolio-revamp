@@ -2,7 +2,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { css } from 'styled-system/css';
-	import { circle, container, hstack } from 'styled-system/patterns';
+	import { circle, container, hstack, square } from 'styled-system/patterns';
 	import { Github, GithubIcon, LogOut, MenuIcon } from 'lucide-svelte';
 
 	let showNav: boolean = false;
@@ -57,17 +57,17 @@
 		w: 'full',
 		h: 'auto',
 		pos: 'sticky',
-		top: '0'
+		top: '0',
+		zIndex: "30"
 	})}
 >
 	<nav
 		class={container({
-			py: '4',
-			bg: 'black',
-			opacity: '90%',
+			py: '3',
+			bg: 'neutral.950',
 			blur: 'md',
 			color: 'white',
-			borderBottom: '1px solid black'
+			borderBottom: '0.5px solid grey'
 		})}
 	>
 		<div
@@ -84,14 +84,23 @@
 				})}
 				href="/"
 			>
-				<div class={css({ w: '8', h: '8', pos: 'relative' })}>
-					<img
-						class={css({ pos: 'absolute', h: 'full', w: 'full' })}
-						src="/favicon.webp"
-						alt="Skull"
-					/>
+				<div
+					class={square({
+						w: '8',
+						h: '8',
+						pos: 'relative',
+						bg: "yellow.500",
+						rounded: "md",
+						'& > img': {
+							w: '97%',
+							h: '97%',
+							pos: 'absolute'
+						}
+					})}
+				>
+					<img src="/favicon.webp" alt="Skull" />
 				</div>
-				<span class={css({ fontSize: 'md' })}>BNJBN.G</span>
+				<span class={css({ fontSize: '2xl', textTransform: "lowercase" })}>BNJBN.G</span>
 			</a>
 			<ul
 				class={hstack({
