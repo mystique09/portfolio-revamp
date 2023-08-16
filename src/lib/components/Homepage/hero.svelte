@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { css } from 'styled-system/css';
+	import { container, float, vstack } from 'styled-system/patterns';
+
 	let skills: string[] = [
 		'go developer',
 		'typescript',
@@ -13,19 +16,59 @@
 	$: currentSkill = skills[i];
 </script>
 
-<main id="#" class="hero min-h-screen bg-base-100 dark:bg-neutral dark:text-neutral-content">
-	<div class="hero-content max-w-4xl w-full flex justify-start">
-		<div class="max-w-4xl">
-			<p class="text-xs mt-1 font-thin badge badge-primary dark:badge-secondary">{currentSkill}</p>
-			<h1 class="text-7xl md:text-8xl font-bold text-base-content dark:text-white">
-				Benjie Ben Garcia
+<main id="#" class={css({ bgColor: 'neutral.950', h: '100vh' })}>
+	<div class={container()}>
+		<div class={css({ pos: 'relative', py: '2rem' })}>
+			<!--
+			<h1
+				class={css({
+					fontSize: '3xl',
+					fontWeight: 'bold',
+					color: 'white',
+					lineHeight: '1.5rem',
+					mb: '2rem',
+					md: {
+						fontSize: '3xl'
+					},
+					_dark: {
+						color: 'white'
+					}
+				})}
+			>
+				Benjie Ben G.
 			</h1>
-			<p class="mt-4 text-sm md:text-base max-w-xl tracking-wide">
-				Hello, welcome to my portfolio. I am excited to share with you some of my past projects
-				and accomplishments as a programmer. As you browse through my portfolio, I hope you will get
-				a sense of my passion for technology and my dedication to constantly learning and improving
-				my skills. Thank you for visiting my portfolio and I hope you enjoy what you see.
-			</p>
+			-->
+			<h1
+				class={float({
+					placement: 'middle-center',
+					color: 'neutral.900',
+					fontSize: '40rem',
+					zIndex: '-1'
+				})}
+			>
+				B
+			</h1>
+
+			<div
+				class={vstack({
+					fontSize: 'sm',
+					color: 'neutral.100',
+					fontWeight: 'normal',
+					lineHeight: '1.5rem',
+					gap: "3"
+				})}
+			>
+				<p>
+					Hello, welcome to my portfolio. I am excited to share with you some of my past projects
+					and accomplishments as a programmer.
+				</p>
+
+				<p>
+					As you browse through my portfolio, I hope you will get a sense of my passion for
+					technology and my dedication to constantly learning and improving my skills.
+				</p>
+				<p>Thank you for visiting my portfolio and I hope you enjoy what you see.</p>
+			</div>
 			<div class="socials" />
 		</div>
 	</div>
