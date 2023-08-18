@@ -57,15 +57,16 @@
 		w: 'full',
 		h: 'auto',
 		pos: 'sticky',
+		bg: 'neutral.950',
 		top: '0',
-		zIndex: "30"
+		zIndex: '30'
 	})}
 >
 	<nav
 		class={container({
 			py: '3',
-			bg: 'neutral.950',
 			blur: 'md',
+			bg: 'inherit',
 			color: 'white',
 			borderBottom: '0.5px solid grey'
 		})}
@@ -86,11 +87,10 @@
 			>
 				<div
 					class={square({
-						w: '8',
-						h: '8',
+						size: "10",
 						pos: 'relative',
-						bg: "yellow.500",
-						rounded: "md",
+						bg: 'yellow.500',
+						rounded: 'md',
 						'& > img': {
 							w: '97%',
 							h: '97%',
@@ -100,7 +100,7 @@
 				>
 					<img src="/favicon.webp" alt="Skull" />
 				</div>
-				<span class={css({ fontSize: '2xl', textTransform: "lowercase" })}>BNJBN.G</span>
+				<h1 class={css({ fontSize: '2xl', textTransform: 'lowercase' })}>BNJBN.G</h1>
 			</a>
 			<ul
 				class={hstack({
