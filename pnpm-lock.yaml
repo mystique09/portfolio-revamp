@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@fontsource/montserrat':
+    specifier: ^5.0.8
+    version: 5.0.8
   '@fontsource/poppins':
     specifier: ^5.0.7
     version: 5.0.7
@@ -888,6 +891,10 @@ packages:
 
   /@floating-ui/utils@0.1.1:
     resolution: {integrity: sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==}
+    dev: true
+
+  /@fontsource/montserrat@5.0.8:
+    resolution: {integrity: sha512-bNj6wfiWXXbsxb2ffatjpX+GBv30cWZ1lwNXW9qTeX2FnzPomsGRV4HdPrf3TqyTiVqX6fLo80zrQcMi7r8+fA==}
     dev: true
 
   /@fontsource/poppins@5.0.7:

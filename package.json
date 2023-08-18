@@ -21,6 +21,7 @@
 		"format": "rome --format . --write ."
 	},
 	"devDependencies": {
+		"@fontsource/montserrat": "^5.0.8",
 		"@fontsource/poppins": "^5.0.7",
 		"@pandacss/dev": "^0.9.0",
 		"@sveltejs/adapter-auto": "2.1.0",
