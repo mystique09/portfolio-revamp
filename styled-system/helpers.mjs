@@ -3,22 +3,6 @@ function isObject(value) {
   return typeof value === "object" && value != null && !Array.isArray(value);
 }
 
-// src/astish.ts
-var newRule = /(?:([\u0080-\uFFFF\w-%@]+) *:? *([^{;]+?);|([^;}{]*?) *{)|(}\s*)/g;
-var ruleClean = /\/\*[^]*?\*\/|\s\s+|\n/g;
-var astish = (val, tree = [{}]) => {
-  const block = newRule.exec((val ?? "").replace(ruleClean, ""));
-  if (!block)
-    return tree[0];
-  if (block[4])
-    tree.shift();
-  else if (block[3])
-    tree.unshift(tree[0][block[3]] = tree[0][block[3]] || {});
-  else
-    tree[0][block[1]] = block[2];
-  return astish(val, tree);
-};
-
 // src/compact.ts
 function compact(value) {
   return Object.fromEntries(Object.entries(value ?? {}).filter(([_, value2]) => value2 !== void 0));
@@ -65,17 +49,19 @@ function toHash(value) {
 
 // src/merge-props.ts
 function mergeProps(...sources) {
-  const result = {};
-  for (const source of sources) {
-    for (const [key, value] of Object.entries(source)) {
-      if (isObject(value)) {
-        result[key] = mergeProps(result[key] || {}, value);
+  const objects = sources.filter(Boolean);
+  return objects.reduce((prev, obj) => {
+    Object.keys(obj).forEach((key) => {
+      const prevValue = prev[key];
+      const value = obj[key];
+      if (isObject(prevValue) && isObject(value)) {
+        prev[key] = mergeProps(prevValue, value);
       } else {
-        result[key] = value;
+        prev[key] = value;
       }
-    }
-  }
-  return result;
+    });
+    return prev;
+  }, {});
 }
 
 // src/walk-object.ts
@@ -126,7 +112,7 @@ function normalizeShorthand(styles, context) {
     }
   });
 }
-function normalizeStyleObject(styles, context) {
+function normalizeStyleObject(styles, context, shorthand = true) {
   const { utility, conditions } = context;
   const { hasShorthand, resolveShorthand } = utility;
   return walkObject(
@@ -136,9 +122,7 @@ function normalizeStyleObject(styles, context) {
     },
     {
       stop: (value) => Array.isArray(value),
-      getKey: (prop) => {
-        return hasShorthand ? resolveShorthand(prop) : prop;
-      }
+      getKey: shorthand ? (prop) => hasShorthand ? resolveShorthand(prop) : prop : void 0
     }
   );
 }
@@ -225,15 +209,28 @@ var hypenateProperty = memo((property) => {
   return property.replace(wordRegex, "-$1").replace(msRegex, "-ms-").toLowerCase();
 });
 
-// src/normalize-html.ts
-var htmlProps = ["htmlSize", "htmlTranslate", "htmlWidth", "htmlHeight"];
-function convert(key) {
-  return htmlProps.includes(key) ? key.replace("html", "").toLowerCase() : key;
-}
-function normalizeHTMLProps(props) {
-  return Object.fromEntries(Object.entries(props).map(([key, value]) => [convert(key), value]));
-}
-normalizeHTMLProps.keys = htmlProps;
+// src/slot.ts
+var getSlotRecipes = (recipe = {}) => {
+  const init = (slot) => ({
+    className: [recipe.className, slot].filter(Boolean).join("__"),
+    base: recipe.base?.[slot] ?? {},
+    variants: {},
+    defaultVariants: recipe.defaultVariants ?? {},
+    compoundVariants: recipe.compoundVariants ? getSlotCompoundVariant(recipe.compoundVariants, slot) : []
+  });
+  const slots = recipe.slots ?? [];
+  const recipeParts = slots.map((slot) => [slot, init(slot)]);
+  for (const [variantsKey, variantsSpec] of Object.entries(recipe.variants ?? {})) {
+    for (const [variantKey, variantSpec] of Object.entries(variantsSpec)) {
+      recipeParts.forEach(([slot, slotRecipe]) => {
+        slotRecipe.variants[variantsKey] ??= {};
+        slotRecipe.variants[variantsKey][variantKey] = variantSpec[slot] ?? {};
+      });
+    }
+  }
+  return Object.fromEntries(recipeParts);
+};
+var getSlotCompoundVariant = (compoundVariants, slotName) => compoundVariants.filter((compoundVariant) => compoundVariant.css[slotName]).map((compoundVariant) => ({ ...compoundVariant, css: compoundVariant.css[slotName] }));
 
 // src/split-props.ts
 function splitProps(props, ...keys) {
@@ -253,29 +250,37 @@ function splitProps(props, ...keys) {
   const fn = (key) => split(Array.isArray(key) ? key : dKeys.filter(key));
   return keys.map(fn).concat(split(dKeys));
 }
+
+// src/uniq.ts
+var uniq = (...items) => items.filter(Boolean).reduce((acc, item) => Array.from(/* @__PURE__ */ new Set([...acc, ...item])), []);
 export {
-  astish,
   compact,
   createCss,
   createMergeCss,
   filterBaseConditions,
+  getSlotCompoundVariant,
+  getSlotRecipes,
   hypenateProperty,
   isBaseCondition,
   isObject,
   mapObject,
+  memo,
   mergeProps,
-  normalizeHTMLProps,
   splitProps,
   toHash,
+  uniq,
   walkObject,
   withoutSpace
 };
 
 
-export function __spreadValues(a, b){
+
+
+
+export function __spreadValues(a, b) {
   return { ...a, ...b }
 }
 
-export function __objRest(source, exclude){
+export function __objRest(source, exclude) {
   return Object.fromEntries(Object.entries(source).filter(([key]) => !exclude.includes(key)))
 }

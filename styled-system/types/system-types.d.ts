@@ -1,10 +1,22 @@
 /* eslint-disable */
-import type { ConditionalValue, Conditions, Nested } from './conditions'
-import type { PropertiesFallback } from './csstype'
-import type { SystemProperties, CssVarProperties } from './style-props'
+import type {  ConditionalValue, Conditions, Nested  } from './conditions';
+import type {  PropertiesFallback  } from './csstype';
+import type {  SystemProperties, CssVarProperties  } from './style-props';
 
 type String = string & {}
 type Number = number & {}
+
+export type Pretty<T> = { [K in keyof T]: T[K] } & {}
+
+export type DistributiveOmit<T, K extends keyof any> = T extends unknown ? Omit<T, K> : never
+
+export type DistributiveUnion<T, U> = {
+  [K in keyof T]: K extends keyof U ? U[K] | T[K] : T[K]
+} & DistributiveOmit<U, keyof T>
+
+export type Assign<T, U> = {
+  [K in keyof T]: K extends keyof U ? U[K] : T[K]
+} & U
 
 /* -----------------------------------------------------------------------------
  * Native css properties
@@ -12,9 +24,9 @@ type Number = number & {}
 
 export type CssProperty = keyof PropertiesFallback
 
-export type CssProperties = PropertiesFallback<String | Number> & CssVarProperties
+export interface CssProperties extends PropertiesFallback<String | Number>, CssVarProperties {}
 
-export type CssKeyframes = {
+export interface CssKeyframes {
   [name: string]: {
     [time: string]: CssProperties
   }
@@ -28,7 +40,7 @@ type MinimalNested<P> = {
   [K in keyof Conditions]?: Nested<P>
 }
 
-type GenericProperties = {
+interface GenericProperties {
   [key: string]: ConditionalValue<String | Number | boolean>
 }
 
@@ -40,36 +52,40 @@ export type NestedCssProperties = Nested<CssProperties>
 
 export type SystemStyleObject = Nested<SystemProperties & CssVarProperties>
 
-export type GlobalStyleObject = {
+export interface GlobalStyleObject {
   [selector: string]: SystemStyleObject
 }
+export interface ExtendableGlobalStyleObject {
+  [selector: string]: SystemStyleObject | undefined
+  extend?: GlobalStyleObject | undefined
+}
 
-export type CompositionStyleObject<Property extends string> = Nested<{
-  [K in Property]?: K extends keyof SystemStyleObject ? SystemStyleObject[K] : unknown
-}>
+type FilterStyleObject<P extends string> = {
+  [K in P]?: K extends keyof SystemStyleObject ? SystemStyleObject[K] : unknown
+}
+
+export type CompositionStyleObject<Property extends string> = Nested<FilterStyleObject<Property> & CssVarProperties>
 
 /* -----------------------------------------------------------------------------
  * Jsx style props
  * -----------------------------------------------------------------------------*/
+interface WithCss {
+  css?: SystemStyleObject
+}
+type StyleProps = SystemProperties & MinimalNested<SystemStyleObject>
 
-export type JsxStyleProps = SystemProperties &
-  MinimalNested<SystemStyleObject> & {
-    css?: SystemStyleObject
-  }
+export type JsxStyleProps = StyleProps & WithCss
 
-export type Assign<T, U> = Omit<T, keyof U> & U
-
-export type PatchedHTMLProps = {
-  htmlSize?: string | number
+export interface PatchedHTMLProps {
   htmlWidth?: string | number
   htmlHeight?: string | number
   htmlTranslate?: 'yes' | 'no' | undefined
   htmlContent?: string
 }
 
-export type OmittedHTMLProps = 'color' | 'translate' | 'transition' | 'width' | 'height' | 'size' | 'content'
+export type OmittedHTMLProps = 'color' | 'translate' | 'transition' | 'width' | 'height' | 'content'
 
-type WithHTMLProps<T> = Omit<T, OmittedHTMLProps> & PatchedHTMLProps
+type WithHTMLProps<T> = DistributiveOmit<T, OmittedHTMLProps> & PatchedHTMLProps
 
 export type JsxHTMLProps<T extends Record<string, any>, P extends Record<string, any> = {}> = Assign<
   WithHTMLProps<T>,

@@ -63,12 +63,12 @@
 	})}
 >
 	<nav
-		class={container({
-			py: '3',
+		class={css({
+			py: '6',
+			px: '12',
 			blur: 'md',
 			bg: 'inherit',
-			color: 'white',
-			borderBottom: '0.5px solid grey'
+			color: 'white'
 		})}
 	>
 		<div
@@ -87,7 +87,7 @@
 			>
 				<div
 					class={square({
-						size: "10",
+						size: '10',
 						pos: 'relative',
 						bg: 'yellow.500',
 						rounded: 'md',

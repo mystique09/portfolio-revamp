@@ -1,9 +1,9 @@
 /* eslint-disable */
 import type { ConditionalValue } from './conditions';
-import type { CssProperties } from './system-types'
-import type { Tokens } from '../tokens'
+import type { CssProperties } from './system-types';
+import type { Tokens } from '../tokens/index';
 
-type PropertyValueTypes  = {
+interface PropertyValueTypes {
 	aspectRatio: "auto" | "square" | "landscape" | "portrait" | "wide" | "ultrawide" | "golden";
 	zIndex: Tokens["zIndex"];
 	top: Tokens["spacing"];
@@ -58,6 +58,7 @@ type PropertyValueTypes  = {
 	marginInline: "auto" | Tokens["spacing"];
 	marginInlineEnd: "auto" | Tokens["spacing"];
 	marginInlineStart: "auto" | Tokens["spacing"];
+	outlineWidth: Tokens["borderWidths"];
 	outlineColor: Tokens["colors"];
 	outline: Tokens["borders"];
 	outlineOffset: Tokens["spacing"];
@@ -115,6 +116,11 @@ type PropertyValueTypes  = {
 	borderEndEndRadius: Tokens["radii"];
 	borderEndRadius: Tokens["radii"] | CssProperties["borderRadius"];
 	border: Tokens["borders"];
+	borderWidth: Tokens["borderWidths"];
+	borderTopWidth: Tokens["borderWidths"];
+	borderLeftWidth: Tokens["borderWidths"];
+	borderRightWidth: Tokens["borderWidths"];
+	borderBottomWidth: Tokens["borderWidths"];
 	borderColor: Tokens["colors"];
 	borderInline: Tokens["borders"];
 	borderInlineWidth: Tokens["borderWidths"];
@@ -125,10 +131,12 @@ type PropertyValueTypes  = {
 	borderLeft: Tokens["borders"];
 	borderLeftColor: Tokens["colors"];
 	borderInlineStart: Tokens["borders"];
+	borderInlineStartWidth: Tokens["borderWidths"];
 	borderInlineStartColor: Tokens["colors"];
 	borderRight: Tokens["borders"];
 	borderRightColor: Tokens["colors"];
 	borderInlineEnd: Tokens["borders"];
+	borderInlineEndWidth: Tokens["borderWidths"];
 	borderInlineEndColor: Tokens["colors"];
 	borderTop: Tokens["borders"];
 	borderTopColor: Tokens["colors"];
@@ -138,6 +146,7 @@ type PropertyValueTypes  = {
 	borderBlockEndColor: Tokens["colors"];
 	borderBlockStart: Tokens["borders"];
 	borderBlockStartColor: Tokens["colors"];
+	opacity: Tokens["opacity"];
 	boxShadow: Tokens["shadows"];
 	boxShadowColor: Tokens["colors"];
 	filter: "auto";
@@ -153,6 +162,7 @@ type PropertyValueTypes  = {
 	transitionDuration: Tokens["durations"];
 	transition: "all" | "common" | "background" | "colors" | "opacity" | "shadow" | "transform";
 	animation: Tokens["animations"];
+	animationName: Tokens["animationName"];
 	animationDelay: Tokens["durations"];
 	scale: "auto" | CssProperties["scale"];
 	translate: "auto" | CssProperties["translate"];
@@ -196,9 +206,10 @@ type PropertyValueTypes  = {
 	scrollSnapMarginRight: Tokens["spacing"];
 	fill: Tokens["colors"];
 	stroke: Tokens["colors"];
+	strokeWidth: Tokens["borderWidths"];
 	srOnly: boolean;
 	debug: boolean;
-	colorPalette: "rose" | "pink" | "fuchsia" | "purple" | "violet" | "indigo" | "blue" | "sky" | "cyan" | "teal" | "emerald" | "green" | "lime" | "yellow" | "amber" | "orange" | "red" | "neutral" | "stone" | "zinc" | "gray" | "slate";
+	colorPalette: "current" | "black" | "white" | "transparent" | "rose" | "pink" | "fuchsia" | "purple" | "violet" | "indigo" | "blue" | "sky" | "cyan" | "teal" | "emerald" | "green" | "lime" | "yellow" | "amber" | "orange" | "red" | "neutral" | "stone" | "zinc" | "gray" | "slate";
 	textStyle: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl";
 }
 
@@ -208,7 +219,7 @@ type PropertyValueTypes  = {
 
   type Shorthand<T> = T extends keyof PropertyValueTypes ? PropertyValueTypes[T] | CssValue<T> : CssValue<T>
 
-  export type PropertyTypes = PropertyValueTypes & {
+  export interface PropertyTypes extends PropertyValueTypes {
   
 	pos: Shorthand<"position">;
 	insetEnd: Shorthand<"insetInlineEnd">;
@@ -287,8 +298,10 @@ type PropertyValueTypes  = {
 	borderYWidth: Shorthand<"borderBlockWidth">;
 	borderYColor: Shorthand<"borderBlockColor">;
 	borderStart: Shorthand<"borderInlineStart">;
+	borderStartWidth: Shorthand<"borderInlineStartWidth">;
 	borderStartColor: Shorthand<"borderInlineStartColor">;
 	borderEnd: Shorthand<"borderInlineEnd">;
+	borderEndWidth: Shorthand<"borderInlineEndWidth">;
 	borderEndColor: Shorthand<"borderInlineEndColor">;
 	shadow: Shorthand<"boxShadow">;
 	shadowColor: Shorthand<"boxShadowColor">;
@@ -296,8 +309,19 @@ type PropertyValueTypes  = {
 	y: Shorthand<"translateY">;
 }
 
-export type PropertyValue<T extends string> = T extends keyof PropertyTypes
-  ? ConditionalValue<PropertyTypes[T] | CssValue<T>>
-  : T extends keyof CssProperties
-  ? ConditionalValue<CssProperties[T]>
-  : ConditionalValue<string | number>
+
+
+  type PropertyTypeValue<T extends string> = T extends keyof PropertyTypes
+    ? ConditionalValue<PropertyTypes[T] | CssValue<T> | (string & {})>
+    : never;
+
+  type CssPropertyValue<T extends string> = T extends keyof CssProperties
+    ? ConditionalValue<CssProperties[T] | (string & {})>
+    : never;
+
+  export type PropertyValue<T extends string> = T extends keyof PropertyTypes
+    ? PropertyTypeValue<T>
+    : T extends keyof CssProperties
+      ? CssPropertyValue<T>
+      : ConditionalValue<string | number>
+  

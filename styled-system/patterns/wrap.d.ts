@@ -1,10 +1,11 @@
 /* eslint-disable */
-import type { SystemStyleObject, ConditionalValue } from '../types'
-import type { PropertyValue } from '../types/prop-type'
-import type { Properties } from '../types/csstype'
-import type { Tokens } from '../tokens'
+import type { SystemStyleObject, ConditionalValue } from '../types/index';
+import type { Properties } from '../types/csstype';
+import type { PropertyValue } from '../types/prop-type';
+import type { DistributiveOmit } from '../types/system-types';
+import type { Tokens } from '../tokens/index';
 
-export type WrapProperties = {
+export interface WrapProperties {
    gap?: PropertyValue<'gap'>
 	rowGap?: PropertyValue<'gap'>
 	columnGap?: PropertyValue<'gap'>
@@ -13,11 +14,11 @@ export type WrapProperties = {
 }
 
 
-type WrapOptions = WrapProperties & Omit<SystemStyleObject, keyof WrapProperties >
+interface WrapStyles extends WrapProperties, DistributiveOmit<SystemStyleObject, keyof WrapProperties > {}
 
 interface WrapPatternFn {
-  (options?: WrapOptions): string
-  raw: (options: WrapOptions) => WrapOptions
+  (styles?: WrapStyles): string
+  raw: (styles?: WrapStyles) => SystemStyleObject
 }
 
 

@@ -1,10 +1,11 @@
 /* eslint-disable */
-import type { SystemStyleObject, ConditionalValue } from '../types'
-import type { PropertyValue } from '../types/prop-type'
-import type { Properties } from '../types/csstype'
-import type { Tokens } from '../tokens'
+import type { SystemStyleObject, ConditionalValue } from '../types/index';
+import type { Properties } from '../types/csstype';
+import type { PropertyValue } from '../types/prop-type';
+import type { DistributiveOmit } from '../types/system-types';
+import type { Tokens } from '../tokens/index';
 
-export type FlexProperties = {
+export interface FlexProperties {
    align?: PropertyValue<'alignItems'>
 	justify?: PropertyValue<'justifyContent'>
 	direction?: PropertyValue<'flexDirection'>
@@ -15,11 +16,11 @@ export type FlexProperties = {
 }
 
 
-type FlexOptions = FlexProperties & Omit<SystemStyleObject, keyof FlexProperties >
+interface FlexStyles extends FlexProperties, DistributiveOmit<SystemStyleObject, keyof FlexProperties > {}
 
 interface FlexPatternFn {
-  (options?: FlexOptions): string
-  raw: (options: FlexOptions) => FlexOptions
+  (styles?: FlexStyles): string
+  raw: (styles?: FlexStyles) => SystemStyleObject
 }
 
 
