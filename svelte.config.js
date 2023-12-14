@@ -14,7 +14,9 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			'styled-system': './styled-system/*'
+			'styled-system': './styled-system/*',
+			"$lib": "src/lib",
+			"$lib/*": "src/lib/*"
 		},
 		typescript: {
 			config: (config) => {
