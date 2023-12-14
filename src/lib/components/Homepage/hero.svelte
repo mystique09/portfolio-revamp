@@ -1,11 +1,13 @@
 <script context="module" lang="ts">
 	const mainStyle = css({ bgColor: 'neutral.950', h: 'screen' });
+
 	const containerStyle = container({
 		display: 'grid',
 		h: '100svh',
 		gridRow: '3',
 		px: 12
 	});
+
 	const contentContainerStyle = css({
 		gridArea: '2/1',
 		pos: 'relative',
@@ -33,6 +35,7 @@
 			}
 		}
 	});
+
 	const contentStyle = vstack({
 		pos: 'relative',
 		fontSize: 'lg',
@@ -50,16 +53,16 @@
 	import { css } from 'styled-system/css';
 	import { container, vstack } from 'styled-system/patterns';
 
-	let skillSet: string[] = $state([
-		'am Front-End developer.',
-		'am a self-taught developer.',
-		'I know a little bit about Back-End development.'
-	]);
-	let i = $state(0);
+	// let skillSet: string[] = $state([
+	// 	'am Front-End developer.',
+	// 	'am a self-taught developer.',
+	// 	'I know a little bit about Back-End development.'
+	// ]);
+	// let i = $state(0);
 
-	setInterval(() => (i = (i + 1) % skillSet.length), 3000);
+	// setInterval(() => (i = (i + 1) % skillSet.length), 3000);
 
-	let currentSkill = $derived(skillSet[i]);
+	// let currentSkill = $derived(skillSet[i]);
 </script>
 
 <main id="#" class={mainStyle}>

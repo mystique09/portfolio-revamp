@@ -8,7 +8,9 @@
 			<div class="w-14 h-14">
 				<img class="w-full h-full" src="/favicon.webp" alt="footer avatar" />
 			</div>
-			<p class="mt-2 text-white dark:text-neutral">Benjie Ben Garcia. <br />© {new Date().getFullYear()}</p>
+			<p class="mt-2 text-white dark:text-neutral">
+				Benjie Ben Garcia. <br />© {new Date().getFullYear()}
+			</p>
 		</div>
 		<div class="div">
 			<span class="text-neutral-content font-bold dark:text-base-content uppercase mb-0.5"

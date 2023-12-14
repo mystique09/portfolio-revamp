@@ -1,9 +1,18 @@
 <script lang="ts">
-	export let id: string;
-	export let title: string;
+	import type { Snippet } from "svelte";
+
+	interface Props {
+		id: string;
+		title: string;
+		children: Snippet;
+	}
+
+	let { id, title, children, ...rest } = $props<Props>();
 </script>
 
-<main class="" {id}>
+<main {...rest} {id}>
 	<h2 class="">{title}</h2>
-	<slot />
+	{#if children}
+		{@render children()}
+	{/if}
 </main>

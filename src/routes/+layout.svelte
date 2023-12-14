@@ -1,17 +1,26 @@
 <script lang="ts">
 	import Navbar from '$lib/components/layouts/navbar.svelte';
-	import Footer from '$lib/components/layouts/footer.svelte';
+	// import Footer from '$lib/components/layouts/footer.svelte';
 
-	import "@fontsource/montserrat";
-	import "@fontsource/poppins"
-	import "@fontsource/poppins/100.css"
-	import "@fontsource/poppins/300.css"
-	import "@fontsource/poppins/500.css"
-	import "@fontsource/poppins/700.css"
-	
+	import '@fontsource/montserrat';
+	import '@fontsource/poppins';
+	import '@fontsource/poppins/100.css';
+	import '@fontsource/poppins/300.css';
+	import '@fontsource/poppins/500.css';
+	import '@fontsource/poppins/700.css';
+
+	import type { Snippet } from 'svelte';
 	import '../app.css';
+
+	interface Props {
+		children: Snippet;
+	}
+
+	let { children } = $props<Props>();
 </script>
 
 <Navbar />
-<slot />
-<Footer />
+{#if children}
+	{@render children()}
+{/if}
+<!-- <Footer /> -->
